@@ -1,4 +1,0 @@
-Command Descriptions
---------------------
-
-(Command descriptions)
