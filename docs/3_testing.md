@@ -1,0 +1,6 @@
+You'll have to do lots of tries before your RMS works well. You have two choices for this.
+
+The "Generate Map" button in the Scenario Editor can be used to generate your map, as long as you are running either HD or UP. You do not need to restart your game – just save changes to your script and hit "Generate Map" again.
+The other option is to start a singleplayer match in "All Visible" mode. Note that if you click "Restart Game", the random seed won't be changed, that is: it will generate exactly the same map! If you minimize the game (alt + tab), modify the RMS, then click "Restart Game", only the things you modified will actually change. If you want to see a completely different output of your RMS, you need to click "End Game" and then set up a new game again (yeah, very boring...).
+
+For most purposes, the Scenario Editor is fine, however, occasionally things will generate slightly differently in the Scenario Editor than they will in-game. For example: resource_delta doesn’t work, player objects on water behave differently and a few objects are invisible. Most importantly, every player is always on their own team for the purposes of map generation in the Scenario Editor. Thus you need to test team lands and team connections in-game instead of in the Scenario Editor. 

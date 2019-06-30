@@ -1,13 +1,14 @@
 site_name: Age of Empires II Random Map Script Reference
 nav:
-    - Home: index.md
-    - Language Reference: language_reference.md
-    - Terrains and Objects: terrains_and_objects.md
-    - Testing: testing.md
-    - Example Script: example_script.md
-    - Links and Resources: links_and_resources.md
+    - 0. Introduction: index.md
+    - 1. Language Reference: 1_language_reference.md
+    - 2. Terrains & Objects: 2_terrains_and_objects.md
+    - 3. Testing: 3_testing.md
+    - 4. Example Script: 4_example_script.md
+    - 5. Links and Resources: 5_links_and_resources.md
 
 theme: 
     name: readthedocs
-    highlightjs: true # we use our own version, but take the css from this one
+    highlightjs: false # we use our own version
 extra_javascript: [highlight.js, highlight.js-rms.js]
+extra_css: [github.css]

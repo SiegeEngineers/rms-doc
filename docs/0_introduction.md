@@ -1,17 +1,3 @@
-<div align="center">
-<h1>UPDATED NEW RANDOM MAP SCRIPTING GUIDE<br>
-(Age of Empires II: the Conquerors Expansion)</h1>
-<h5>by Bultro</h5>
-
-<p>
-Updated for:<br>
-Age of Empires II HD [HD] and all its DLC expansions and the UserPatch 1.4 [UP]<br>
-by Zetnus<br>
-<i>most recent revision 19 June 2019</i>
-</p>
-</div>
-
-
 ### 0.1. Versions of the Game
 
 This guide was originally written for Age of Empires II: The Conquerors [AoC], which was released on CD in 1999.  The CD version of the game has received fan-made updates in the form of the UserPatch [UP]. This guide has been updated to cover functionality added by UserPatch 1.4. UserPatch 1.5 adds many additional features (such as direct placement and modifying object attributes), which are NOT yet covered in this guide. The Conquerors was re-released on Steam as the HD Edition in 2013, where it implemented almost all of the UP 1.4 features as well. It then received three official DLC expansions: The Forgotten, African Kingdoms, and Rise of the Rajas, which all provided additional civilizations and content in the form of terrains and objects. This guide has been updated to cover the HD Edition and its expansions.

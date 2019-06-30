@@ -34,5 +34,3 @@ function rmslanguage(hljs) {
     }
 }
 
-
-hljs.registerLanguage('rmslanguage', rmslanguage);
