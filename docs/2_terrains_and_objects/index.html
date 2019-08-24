@@ -1,0 +1,4669 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>2. Terrains & Objects - Age of Empires II Random Map Script Reference</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link href="../github.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2. Terrains & Objects";
+    var mkdocs_page_input_path = "2_terrains_and_objects.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Age of Empires II Random Map Script Reference</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">0. Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../1_language_reference/">1. Language Reference</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">2. Terrains & Objects</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#21-terrains">2.1. Terrains</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#211-dlc-terrains">2.1.1. DLC Terrains</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#22-player-objects">2.2. Player Objects</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#221-barracks-units">2.2.1. Barracks Units</a></li>
+        
+            <li><a class="toctree-l3" href="#222-archery-range-units">2.2.2. Archery Range Units</a></li>
+        
+            <li><a class="toctree-l3" href="#223-stable-units">2.2.3. Stable Units</a></li>
+        
+            <li><a class="toctree-l3" href="#224-siege-engines">2.2.4. Siege Engines</a></li>
+        
+            <li><a class="toctree-l3" href="#225-ships">2.2.5. Ships</a></li>
+        
+            <li><a class="toctree-l3" href="#226-reserved-units">2.2.6. Reserved Units</a></li>
+        
+            <li><a class="toctree-l3" href="#227-other-standard-units">2.2.7. Other standard units</a></li>
+        
+            <li><a class="toctree-l3" href="#228-heroes">2.2.8. Heroes</a></li>
+        
+            <li><a class="toctree-l3" href="#229-other-units">2.2.9. Other Units</a></li>
+        
+            <li><a class="toctree-l3" href="#2210-standard-buildings">2.2.10. Standard Buildings</a></li>
+        
+            <li><a class="toctree-l3" href="#2211-note-on-walls">2.2.11. Note on Walls</a></li>
+        
+            <li><a class="toctree-l3" href="#2212-other-buildings">2.2.12. Other Buildings</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#23-gaia-objects">2.3. Gaia Objects</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#231-animals">2.3.1. Animals</a></li>
+        
+            <li><a class="toctree-l3" href="#232-trees">2.3.2. Trees</a></li>
+        
+            <li><a class="toctree-l3" href="#233-other">2.3.3. Other</a></li>
+        
+            <li><a class="toctree-l3" href="#234-dead-units">2.3.4. Dead Units</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#24-dlc-objects">2.4. DLC Objects</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#241-animals-from-all-expansions">2.4.1. Animals from all Expansions</a></li>
+        
+            <li><a class="toctree-l3" href="#242-eye-candy-from-the-forgotten">2.4.2. Eye-candy from the Forgotten</a></li>
+        
+            <li><a class="toctree-l3" href="#243-buildings-from-the-forgotten">2.4.3. Buildings from the Forgotten</a></li>
+        
+            <li><a class="toctree-l3" href="#244-units-from-the-forgotten">2.4.4. Units from the Forgotten</a></li>
+        
+            <li><a class="toctree-l3" href="#245-heroes-from-the-forgotten">2.4.5. Heroes from the Forgotten</a></li>
+        
+            <li><a class="toctree-l3" href="#246-dead-units-from-the-forgotten">2.4.6. Dead Units from the Forgotten</a></li>
+        
+            <li><a class="toctree-l3" href="#247-eye-candy-from-african-kingdoms">2.4.7. Eye-candy from African Kingdoms</a></li>
+        
+            <li><a class="toctree-l3" href="#248-buildings-from-african-kingdoms">2.4.8. Buildings from African Kingdoms</a></li>
+        
+            <li><a class="toctree-l3" href="#249-projectiles-from-african-kingdoms">2.4.9. Projectiles from African Kingdoms</a></li>
+        
+            <li><a class="toctree-l3" href="#2410-units-from-african-kingdoms">2.4.10. Units from African Kingdoms</a></li>
+        
+            <li><a class="toctree-l3" href="#2411-dead-units-from-african-kingdoms">2.4.11. Dead Units from African Kingdoms</a></li>
+        
+            <li><a class="toctree-l3" href="#2412-heroes-from-african-kingdoms">2.4.12. Heroes from African Kingdoms</a></li>
+        
+            <li><a class="toctree-l3" href="#2413-eye-candy-from-rise-of-the-rajas">2.4.13. Eye-candy from Rise of the Rajas</a></li>
+        
+            <li><a class="toctree-l3" href="#2414-buildings-from-rise-of-the-rajas">2.4.14. Buildings from Rise of the Rajas</a></li>
+        
+            <li><a class="toctree-l3" href="#2415-projectiles-from-rise-of-the-rajas">2.4.15. Projectiles from Rise of the Rajas</a></li>
+        
+            <li><a class="toctree-l3" href="#2416-units-from-rise-of-the-rajas">2.4.16. Units from Rise of the Rajas</a></li>
+        
+            <li><a class="toctree-l3" href="#2417-dead-units-from-rise-of-the-rajas">2.4.17. Dead Units from Rise of the Rajas</a></li>
+        
+            <li><a class="toctree-l3" href="#2418-heroes-from-rise-of-the-rajas">2.4.18. Heroes from Rise of the Rajas</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3_testing/">3. Testing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../4_example_script/">4. Example Script</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../5_links_and_resources/">5. Links and Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Age of Empires II Random Map Script Reference</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>2. Terrains & Objects</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Here are the lists of available item types, including:</p>
+<ul>
+<li>Predefined constant name, if any (otherwise use <code>#const</code>). </li>
+<li>Constant number N, to be used for name definitions: <code>#const  name  N</code></li>
+<li>Comments, if needed</li>
+</ul>
+<p>I reported only items that look good enough to be useful in a RMS. For a complete list of constants, including defective stuff, see Links and Resources.</p>
+<h2 id="21-terrains">2.1. Terrains</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Predefined Name</th>
+<th>N</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beach</td>
+<td>BEACH</td>
+<td>2</td>
+<td>Automatically placed around coasts. Ships can sail on! No buildings except walls</td>
+</tr>
+<tr>
+<td>Beach, icy</td>
+<td></td>
+<td>37</td>
+<td>Automatically placed around snowy coasts, acts like BEACH</td>
+</tr>
+<tr>
+<td>Dirt</td>
+<td>DIRT</td>
+<td>6</td>
+<td>Includes some cactus objects</td>
+</tr>
+<tr>
+<td>Dirt, foundation</td>
+<td></td>
+<td>27</td>
+<td>Like DIRT2, but has no beaches, still dockable, created by buildings</td>
+</tr>
+<tr>
+<td>Dirt, grass mix</td>
+<td>DIRT2</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr>
+<td>Dirt, greenish</td>
+<td>DIRT3</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>Dirt, snowy</td>
+<td>DIRT_SNOW</td>
+<td>33</td>
+<td>Has ice beaches</td>
+</tr>
+<tr>
+<td>Dirt, snowy, foundation</td>
+<td></td>
+<td>36</td>
+<td>Like DIRT_SNOW, but has no beaches, still dockable, created by buildings placed on snowy terrain</td>
+</tr>
+<tr>
+<td>Desert</td>
+<td>DESERT</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>Farms, ploughed</td>
+<td></td>
+<td>29</td>
+<td>Terrain only, not cultivable!</td>
+</tr>
+<tr>
+<td>Farms, growing</td>
+<td></td>
+<td>30</td>
+<td>Terrain only, not cultivable!</td>
+</tr>
+<tr>
+<td>Farms, growing more</td>
+<td></td>
+<td>31</td>
+<td>Terrain only, not cultivable!</td>
+</tr>
+<tr>
+<td>Farms, planted</td>
+<td></td>
+<td>7</td>
+<td>Terrain only, no food!</td>
+</tr>
+<tr>
+<td>Farms, expired</td>
+<td></td>
+<td>8</td>
+<td>Terrain only, not replantable!</td>
+</tr>
+<tr>
+<td>Forest, Bamboo</td>
+<td>BAMBOO</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>Forest</td>
+<td>FOREST</td>
+<td>10</td>
+<td>20 is same, but game thinks it's different (e.g. as base_terrain)</td>
+</tr>
+<tr>
+<td>Forest, Oak</td>
+<td></td>
+<td>20</td>
+<td>Like FOREST, but is called "Oak forest" when you click on a tree</td>
+</tr>
+<tr>
+<td>Forest, Jungle</td>
+<td>JUNGLE</td>
+<td>17</td>
+<td></td>
+</tr>
+<tr>
+<td>Forest, Leaves</td>
+<td>LEAVES</td>
+<td>5</td>
+<td>Terrain left when temperate or tropical forest is chopped</td>
+</tr>
+<tr>
+<td>Forest, Palm</td>
+<td>PALM_DESERT</td>
+<td>13</td>
+<td>Leaves behind DESERT when chopped</td>
+</tr>
+<tr>
+<td>Forest, Pine</td>
+<td>PINE_FOREST</td>
+<td>19</td>
+<td></td>
+</tr>
+<tr>
+<td>Forest, Snowy</td>
+<td>SNOW_FOREST</td>
+<td>21</td>
+<td>Leaves behind GRASS_SNOW when chopped, gets a special "leaves, snow" texture in the HD Edition</td>
+</tr>
+<tr>
+<td>Grass</td>
+<td>GRASS</td>
+<td>0</td>
+<td>Default terrain</td>
+</tr>
+<tr>
+<td>Grass, cliffs</td>
+<td></td>
+<td>16</td>
+<td>Like GRASS; automatically placed under all cliffs</td>
+</tr>
+<tr>
+<td>Grass, other</td>
+<td></td>
+<td>41</td>
+<td>Like GRASS, but black on the minimap.  DO NOT USE – unit pathing is broken on this terrain</td>
+</tr>
+<tr>
+<td>Grass, brighter</td>
+<td>GRASS2</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>Grass, brownish</td>
+<td>GRASS3</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>Grass, snowy</td>
+<td>GRASS_SNOW</td>
+<td>34</td>
+<td>Terrain left when snowy forest is chopped</td>
+</tr>
+<tr>
+<td>Ice</td>
+<td>ICE</td>
+<td>35</td>
+<td>Ships cannot sail through this</td>
+</tr>
+<tr>
+<td>Ice, other</td>
+<td></td>
+<td>26</td>
+<td>Like ICE, ships can sail through this, acts like SHALLOW</td>
+</tr>
+<tr>
+<td>Road</td>
+<td>ROAD</td>
+<td>24</td>
+<td>You can't place gold, stone, berries on any type of road</td>
+</tr>
+<tr>
+<td>Road, dirty</td>
+<td>ROAD2</td>
+<td>25</td>
+<td></td>
+</tr>
+<tr>
+<td>Road, grassy</td>
+<td></td>
+<td>39</td>
+<td></td>
+</tr>
+<tr>
+<td>Road, other</td>
+<td></td>
+<td>40</td>
+<td>Like ROAD, no buildings, used in King of the Hill</td>
+</tr>
+<tr>
+<td>Road, snowy</td>
+<td></td>
+<td>38</td>
+<td></td>
+</tr>
+<tr>
+<td>Shallow</td>
+<td>SHALLOW</td>
+<td>4</td>
+<td>Swampy water; walkable and navigable</td>
+</tr>
+<tr>
+<td>Snow</td>
+<td>SNOW</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>Water, deep</td>
+<td>DEEP_WATER</td>
+<td>22</td>
+<td>Not dockable</td>
+</tr>
+<tr>
+<td>Water, medium</td>
+<td>MED_WATER</td>
+<td>23</td>
+<td>Not dockable</td>
+</tr>
+<tr>
+<td>Water, shallow</td>
+<td>WATER</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Water, shallow, no beach</td>
+<td></td>
+<td>15</td>
+<td>Like WATER, but has no beaches, not dockable</td>
+</tr>
+<tr>
+<td>Water, shallow, walkable!</td>
+<td></td>
+<td>28</td>
+<td>Like WATER, no beaches, walkable, no ships</td>
+</tr>
+</tbody>
+</table>
+<h3 id="211-dlc-terrains">2.1.1. DLC Terrains</h3>
+<p>These terrains were added by The Forgotten, African Kingdoms, and Rise of the Rajas. For the most part, they will cause the map to CRASH if you attempt to load a map that contains them in any version of the game that does not have the required expansions.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Predefined Name</th>
+<th>N</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rock</td>
+<td>DLC_ROCK</td>
+<td>40</td>
+<td>No buildings, King of the hill, also in the basegame but looks like ROAD there</td>
+</tr>
+<tr>
+<td>Savannah</td>
+<td>DLC_SAVANNAH</td>
+<td>41</td>
+<td></td>
+</tr>
+<tr>
+<td>Dirt 4</td>
+<td>DLC_DIRT4</td>
+<td>42</td>
+<td>Blend of DIRT and GRASS</td>
+</tr>
+<tr>
+<td>Road, Desert</td>
+<td>DLC_DRYROAD</td>
+<td>43</td>
+<td></td>
+</tr>
+<tr>
+<td>Grass, muddy</td>
+<td>DLC_MOORLAND</td>
+<td>44</td>
+<td></td>
+</tr>
+<tr>
+<td>Desert, cracked</td>
+<td>DLC_CRACKED</td>
+<td>45</td>
+<td>Buildings take 25% more damage on this terrain</td>
+</tr>
+<tr>
+<td>Quicksand</td>
+<td>DLC_QUICKSAND</td>
+<td>46</td>
+<td>No buildings; no natural resources</td>
+</tr>
+<tr>
+<td>Black</td>
+<td>DLC_BLACK</td>
+<td>47</td>
+<td>No buildings, completely black</td>
+</tr>
+<tr>
+<td>Dragon Tree Forest</td>
+<td>DLC_DRAGONFOREST</td>
+<td>48</td>
+<td>Leaves behind DIRT when chopped</td>
+</tr>
+<tr>
+<td>Baobab Forest</td>
+<td>DLC_BAOBAFOREST</td>
+<td>49</td>
+<td>200 wood per tree, many gaps between trees, leaves behind DLC_DIRT4 when chopped</td>
+</tr>
+<tr>
+<td>Acacia Forest</td>
+<td>DLC_ACACIAFOREST</td>
+<td>50</td>
+<td>Some gaps between trees, leaves behind DLC_SAVANNAH when chopped</td>
+</tr>
+<tr>
+<td>Beach, white, grassy</td>
+<td>DLC_BEACH2</td>
+<td>51</td>
+<td>Acts like BEACH</td>
+</tr>
+<tr>
+<td>Beach, grassy</td>
+<td>DLC_BEACH3</td>
+<td>52</td>
+<td>Acts like BEACH</td>
+</tr>
+<tr>
+<td>Beach, white</td>
+<td>DLC_BEACH4</td>
+<td>53</td>
+<td>Acts like BEACH</td>
+</tr>
+<tr>
+<td>Shallows, Mangrove</td>
+<td>DLC_MANGROVESHALLOW</td>
+<td>54</td>
+<td>Building possible, ships can sail</td>
+</tr>
+<tr>
+<td>Mangrove Forest</td>
+<td>DLC_MANGROVEFOREST</td>
+<td>55</td>
+<td>Some gaps between trees, leaves behind DLC_MANGROVESHALLOW when chopped</td>
+</tr>
+<tr>
+<td>Rainforest</td>
+<td>DLC_RAINFOREST</td>
+<td>56</td>
+<td>Leaves behind DLC_JUNGLELEAVES when chopped</td>
+</tr>
+<tr>
+<td>Water, Deep Ocean</td>
+<td>DLC_WATER4</td>
+<td>57</td>
+<td>Not dockable</td>
+</tr>
+<tr>
+<td>Water, Azure</td>
+<td>DLC_WATER5</td>
+<td>58</td>
+<td>Dockable</td>
+</tr>
+<tr>
+<td>Shallows, Azure</td>
+<td>DLC_NEWSHALLOW</td>
+<td>59</td>
+<td>Acts like SHALLOW</td>
+</tr>
+<tr>
+<td>Grass, Jungle</td>
+<td>DLC_JUNGLEGRASS</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td>Road, Jungle</td>
+<td>DLC_JUNGLEROAD</td>
+<td>61</td>
+<td></td>
+</tr>
+<tr>
+<td>Leaves, Jungle</td>
+<td>DLC_JUNGLELEAVES</td>
+<td>62</td>
+<td></td>
+</tr>
+<tr>
+<td>Rice Farm</td>
+<td></td>
+<td>63</td>
+<td>no food; building possible; navigable; not dockable</td>
+</tr>
+<tr>
+<td>Rice Farm, Dead</td>
+<td></td>
+<td>64</td>
+<td>no food; building possible; navigable; not dockable</td>
+</tr>
+<tr>
+<td>Rice Farm, 0%</td>
+<td></td>
+<td>65</td>
+<td>no food; building possible; navigable; not dockable</td>
+</tr>
+<tr>
+<td>Rice Farm, 33%</td>
+<td></td>
+<td>66</td>
+<td>no food; building possible; navigable; not dockable</td>
+</tr>
+<tr>
+<td>Rice Farm, 66%</td>
+<td></td>
+<td>67</td>
+<td>no food; building possible; navigable; not dockable</td>
+</tr>
+</tbody>
+</table>
+<p>The HD Edition DLC also adds a bunch of so-called "moddable terrains" (70-99), which look exactly like the existing terrains, but could be used if you wanted to modify terrains and make a map using those modded terrains. For example, you could make a terrain mod that turns a moddable water into the appearance of lava and then make an RMS that specifically uses this terrain.
+Warning! <a href="https://github.com/AoE2CommunityGitHub/WololoKingdoms">Wololo Kingdoms</a> changes some of the constant numbers. Check their documentation for how to handle this. Predefined names are automatically transitioned, but when using <code>#const</code>, you must manually deal with this.</p>
+<h2 id="22-player-objects">2.2. Player Objects</h2>
+<p>These units and buildings can be controlled by a player. With <code>set_gaia_object_only</code>, they become rescuable.
+CAPITAL names are valid predefined labels; other names are only descriptive (use <code>#const</code> for such objects).</p>
+<h3 id="221-barracks-units">2.2.1. Barracks Units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAMPION</td>
+<td>567</td>
+</tr>
+<tr>
+<td>EAGLE_WARRIOR</td>
+<td>751</td>
+</tr>
+<tr>
+<td>ELITE_EAGLE_WARRIOR</td>
+<td>752</td>
+</tr>
+<tr>
+<td>HALBERDIER</td>
+<td>359</td>
+</tr>
+<tr>
+<td>LONG_SWORDSMAN</td>
+<td>77</td>
+</tr>
+<tr>
+<td>MAN_AT_ARMS</td>
+<td>75</td>
+</tr>
+<tr>
+<td>MILITIA</td>
+<td>74</td>
+</tr>
+<tr>
+<td>PIKEMAN</td>
+<td>358</td>
+</tr>
+<tr>
+<td>SPEARMAN</td>
+<td>93</td>
+</tr>
+<tr>
+<td>TWO_HANDED_SWORDSMAN</td>
+<td>473</td>
+</tr>
+</tbody>
+</table>
+<h3 id="222-archery-range-units">2.2.2. Archery Range Units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARBALEST</td>
+<td>492</td>
+</tr>
+<tr>
+<td>ARCHER</td>
+<td>4</td>
+</tr>
+<tr>
+<td>CAVALRY_ARCHER</td>
+<td>39</td>
+</tr>
+<tr>
+<td>CROSSBOWMAN</td>
+<td>24</td>
+</tr>
+<tr>
+<td>ELITE_SKIRMISHER</td>
+<td>6</td>
+</tr>
+<tr>
+<td>HAND_CANNONEER</td>
+<td>5</td>
+</tr>
+<tr>
+<td>HEAVY_CAVALRY_ARCHER</td>
+<td>474</td>
+</tr>
+<tr>
+<td>SKIRMISHER</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="223-stable-units">2.2.3. Stable Units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CAMEL</td>
+<td>329</td>
+<td></td>
+</tr>
+<tr>
+<td>CAVALIER</td>
+<td>283</td>
+<td></td>
+</tr>
+<tr>
+<td>HEAVY_CAMEL</td>
+<td>330</td>
+<td></td>
+</tr>
+<tr>
+<td>HUSSAR</td>
+<td>441</td>
+<td></td>
+</tr>
+<tr>
+<td>KNIGHT</td>
+<td>38</td>
+<td></td>
+</tr>
+<tr>
+<td>LIGHT_CAVALRY</td>
+<td>546</td>
+<td></td>
+</tr>
+<tr>
+<td>PALADIN</td>
+<td>569</td>
+<td></td>
+</tr>
+<tr>
+<td>SCOUT, SCOUT_CAVALRY</td>
+<td>448</td>
+<td>Automatically places Eagle Warriors for Aztecs and Mayas.  I couldn't find a way to place cavalry Scouts for Aztecs and Mayas!</td>
+</tr>
+</tbody>
+</table>
+<h3 id="224-siege-engines">2.2.4. Siege Engines</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BATTERING_RAM</td>
+<td>35</td>
+</tr>
+<tr>
+<td>BOMBARD_CANNON</td>
+<td>36</td>
+</tr>
+<tr>
+<td>CAPPED_RAM</td>
+<td>422</td>
+</tr>
+<tr>
+<td>HEAVY_SCORPION</td>
+<td>542</td>
+</tr>
+<tr>
+<td>MANGONEL</td>
+<td>280</td>
+</tr>
+<tr>
+<td>ONAGER</td>
+<td>550</td>
+</tr>
+<tr>
+<td>SCORPION</td>
+<td>279</td>
+</tr>
+<tr>
+<td>SIEGE_ONAGER</td>
+<td>588</td>
+</tr>
+<tr>
+<td>SIEGE_RAM</td>
+<td>548</td>
+</tr>
+<tr>
+<td>TREBUCHET (unpacked)</td>
+<td>42</td>
+</tr>
+<tr>
+<td>TREBUCHET_PACKED</td>
+<td>331</td>
+</tr>
+</tbody>
+</table>
+<h3 id="225-ships">2.2.5. Ships</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CANNON_GALLEON</td>
+<td>420</td>
+</tr>
+<tr>
+<td>DEMOLITION_SHIP</td>
+<td>527</td>
+</tr>
+<tr>
+<td>ELITE_CANNON_GALLEON</td>
+<td>691</td>
+</tr>
+<tr>
+<td>FAST_FIRE_SHIP</td>
+<td>532</td>
+</tr>
+<tr>
+<td>FIRE_SHIP</td>
+<td>529</td>
+</tr>
+<tr>
+<td>FISHING_SHIP</td>
+<td>13</td>
+</tr>
+<tr>
+<td>GALLEY</td>
+<td>539</td>
+</tr>
+<tr>
+<td>GALLEON</td>
+<td>442</td>
+</tr>
+<tr>
+<td>HEAVY_DEMOLITION_SHIP</td>
+<td>528</td>
+</tr>
+<tr>
+<td>TRADE_COG</td>
+<td>17</td>
+</tr>
+<tr>
+<td>TRANSPORT_SHIP</td>
+<td>545</td>
+</tr>
+<tr>
+<td>WAR_GALLEY</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<h3 id="226-reserved-units">2.2.6. Reserved Units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BERSERK</td>
+<td>692</td>
+</tr>
+<tr>
+<td>CATAPHRACT</td>
+<td>40</td>
+</tr>
+<tr>
+<td>CHU_KO_NU</td>
+<td>73</td>
+</tr>
+<tr>
+<td>CONQUISTADOR</td>
+<td>771</td>
+</tr>
+<tr>
+<td>HUSKARL</td>
+<td>41</td>
+</tr>
+<tr>
+<td>JAGUAR_WARRIOR</td>
+<td>725</td>
+</tr>
+<tr>
+<td>JANISSARY</td>
+<td>46</td>
+</tr>
+<tr>
+<td>LONGBOAT</td>
+<td>250</td>
+</tr>
+<tr>
+<td>LONGBOWMAN</td>
+<td>8</td>
+</tr>
+<tr>
+<td>MAMELUKE</td>
+<td>282</td>
+</tr>
+<tr>
+<td>MANGUDAI</td>
+<td>11</td>
+</tr>
+<tr>
+<td>MISSIONARY</td>
+<td>775</td>
+</tr>
+<tr>
+<td>PLUMED_ARCHER</td>
+<td>763</td>
+</tr>
+<tr>
+<td>SAMURAI</td>
+<td>291</td>
+</tr>
+<tr>
+<td>TARKAN</td>
+<td>755</td>
+</tr>
+<tr>
+<td>TEUTONIC_KNIGHT</td>
+<td>25</td>
+</tr>
+<tr>
+<td>THROWING_AXEMAN</td>
+<td>281</td>
+</tr>
+<tr>
+<td>TURTLE_SHIP</td>
+<td>831</td>
+</tr>
+<tr>
+<td>WAR_ELEPHANT</td>
+<td>239</td>
+</tr>
+<tr>
+<td>WAR_WAGON</td>
+<td>827</td>
+</tr>
+<tr>
+<td>WOAD_RAIDER</td>
+<td>232</td>
+</tr>
+<tr>
+<td>ELITE_BERSERK</td>
+<td>694</td>
+</tr>
+<tr>
+<td>ELITE_CATAPHRACT</td>
+<td>553</td>
+</tr>
+<tr>
+<td>ELITE_CHU_KO_NU</td>
+<td>559</td>
+</tr>
+<tr>
+<td>ELITE_CONQUISTADOR</td>
+<td>773</td>
+</tr>
+<tr>
+<td>ELITE_HUSKARL</td>
+<td>555</td>
+</tr>
+<tr>
+<td>ELITE_JAGUAR_WARRIOR</td>
+<td>726</td>
+</tr>
+<tr>
+<td>ELITE_JANISSARY</td>
+<td>557</td>
+</tr>
+<tr>
+<td>ELITE_LONGBOAT</td>
+<td>533</td>
+</tr>
+<tr>
+<td>ELITE_LONGBOWMAN</td>
+<td>530</td>
+</tr>
+<tr>
+<td>ELITE_MAMELUKE</td>
+<td>556</td>
+</tr>
+<tr>
+<td>ELITE_MANGUDAI</td>
+<td>561</td>
+</tr>
+<tr>
+<td>ELITE_PLUMED_ARCHER</td>
+<td>765</td>
+</tr>
+<tr>
+<td>ELITE_SAMURAI</td>
+<td>560</td>
+</tr>
+<tr>
+<td>ELITE_TARKAN</td>
+<td>757</td>
+</tr>
+<tr>
+<td>ELITE_TEUTONIC_KNIGHT</td>
+<td>554</td>
+</tr>
+<tr>
+<td>ELITE_THROWING_AXEMAN</td>
+<td>531</td>
+</tr>
+<tr>
+<td>ELITE_TURTLE_SHIP</td>
+<td>832</td>
+</tr>
+<tr>
+<td>ELITE_WAR_ELEPHANT</td>
+<td>558</td>
+</tr>
+<tr>
+<td>ELITE_WAR_WAGON</td>
+<td>829</td>
+</tr>
+<tr>
+<td>ELITE_WOAD_RAIDER</td>
+<td>534</td>
+</tr>
+</tbody>
+</table>
+<h3 id="227-other-standard-units">2.2.7. Other standard units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KING</td>
+<td>434</td>
+<td>Must be manually placed for regicide (use: <code>if REGICIDE...</code>)</td>
+</tr>
+<tr>
+<td>MONK</td>
+<td>125</td>
+<td></td>
+</tr>
+<tr>
+<td>PETARD</td>
+<td>440</td>
+<td></td>
+</tr>
+<tr>
+<td>SHEEP</td>
+<td>594</td>
+<td>Can belong to a player at start</td>
+</tr>
+<tr>
+<td>TRADE_CART</td>
+<td>128</td>
+<td></td>
+</tr>
+<tr>
+<td>Trade cart, packed</td>
+<td>204</td>
+<td>Appears as packed, but it's not carrying gold</td>
+</tr>
+<tr>
+<td>TURKEY</td>
+<td>833</td>
+<td>Can belong to a player at start</td>
+</tr>
+<tr>
+<td>VILLAGER</td>
+<td></td>
+<td>Randomly places man or woman. If you don't set <code>number_of_objects</code>, the game will automatically place 3 villagers (or 6 for Chinese, 4 for Mayas)</td>
+</tr>
+<tr>
+<td>Villager</td>
+<td>293 woman, 83 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, builder</td>
+<td>212 woman, 118 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, farmer</td>
+<td>214 woman, 259 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, fisher</td>
+<td>57 woman, 56 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, gatherer</td>
+<td>354 woman, 120 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, miner</td>
+<td>581 woman, 579 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, hunter</td>
+<td>216 woman, 122 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, chopper</td>
+<td>218 woman, 123 man</td>
+<td></td>
+</tr>
+<tr>
+<td>Villager, sheperd</td>
+<td>590 woman, 592 man</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="228-heroes">2.2.8. Heroes</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADMIRAL_YI_SUN_SHIN</td>
+<td>844</td>
+<td>Turtle ship</td>
+</tr>
+<tr>
+<td>AETHELFIRTH</td>
+<td>169</td>
+<td>Woad raider</td>
+</tr>
+<tr>
+<td>Alexander Nevski</td>
+<td>197</td>
+<td>Cavalier. Predefined name is WILLIAM_THE_CONQUEROR2</td>
+</tr>
+<tr>
+<td>ARCHBISHOP</td>
+<td>177</td>
+<td>Monk. Turns to a normal monk when he picks up a relic</td>
+</tr>
+<tr>
+<td>ARCHERS_OF_THE_EYES</td>
+<td>686</td>
+<td>Arbalest, not so tough</td>
+</tr>
+<tr>
+<td>ATTILA_THE_HUN</td>
+<td>777</td>
+<td>Cataphract</td>
+</tr>
+<tr>
+<td>BAD_NEIGHBOR</td>
+<td>682</td>
+<td>Trebuchet, unpacked</td>
+</tr>
+<tr>
+<td>BAD_NEIGHBOR_PACKED</td>
+<td>730</td>
+<td>Trebuchet, packed</td>
+</tr>
+<tr>
+<td>BELISARIUS</td>
+<td>167</td>
+<td>Cataphract</td>
+</tr>
+<tr>
+<td>CHARLEMAGNE</td>
+<td>165</td>
+<td>Throwing axeman</td>
+</tr>
+<tr>
+<td>CHARLES_MARTEL</td>
+<td>424</td>
+<td>Throwing axeman</td>
+</tr>
+<tr>
+<td>CONSTABLE_RICHEMONT</td>
+<td>646</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>DUKE_D_ALENCON</td>
+<td>638</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>EL_CID</td>
+<td>198</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>EL_CID_CAMPEADOR</td>
+<td>824</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>EMPEROR_IN_A_BARREL</td>
+<td>733</td>
+<td>Trade cart. Appears as packed, but it's not carrying gold</td>
+</tr>
+<tr>
+<td>ERIK_THE_RED</td>
+<td>171</td>
+<td>Berserk</td>
+</tr>
+<tr>
+<td>FRANKISH_PALADIN</td>
+<td>632</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>FRIAR_TUCK</td>
+<td>163</td>
+<td>Monk. Turns to a normal monk when he picks up a relic</td>
+</tr>
+<tr>
+<td>GAWAIN</td>
+<td>175</td>
+<td>Cavalier</td>
+</tr>
+<tr>
+<td>GENGHIS_KHAN</td>
+<td>731</td>
+<td>Mangudai, very tough</td>
+</tr>
+<tr>
+<td>GODS_OWN_SLING</td>
+<td>683</td>
+<td>Trebuchet, unpacked</td>
+</tr>
+<tr>
+<td>GODS_OWN_SLING_PACKED</td>
+<td>729</td>
+<td>Trebuchet, packed</td>
+</tr>
+<tr>
+<td>GUY_JOSSELYNE</td>
+<td>648</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>HENRY_V</td>
+<td>847</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>HROLF_THE_GANGER</td>
+<td>428</td>
+<td>Berserk</td>
+</tr>
+<tr>
+<td>HUNTING_WOLF</td>
+<td>700</td>
+<td>Wolf. Only hero wolves can be controlled by players</td>
+</tr>
+<tr>
+<td>IMAM</td>
+<td>842</td>
+<td>Monk. Turns to a normal monk when he picks up a relic</td>
+</tr>
+<tr>
+<td>JEAN_BUREAU</td>
+<td>650</td>
+<td>Bombard cannon, not so tough</td>
+</tr>
+<tr>
+<td>JEAN_DE_LORRAIN</td>
+<td>644</td>
+<td>Bombard cannon</td>
+</tr>
+<tr>
+<td>JOAN_OF_ARC</td>
+<td>629</td>
+<td>Knight, woman (different graphics!)</td>
+</tr>
+<tr>
+<td>JOAN_THE_MAID</td>
+<td>430</td>
+<td>Poor woman, not so tough</td>
+</tr>
+<tr>
+<td>KING_ALFONSO</td>
+<td>840</td>
+<td>King. Hero kings don't work for regicide!</td>
+</tr>
+<tr>
+<td>KING_ARTHUR</td>
+<td>173</td>
+<td>King. Hero kings don't work for regicide!</td>
+</tr>
+<tr>
+<td>KING_SANCHO</td>
+<td>838</td>
+<td>King. Hero kings don't work for regicide!</td>
+</tr>
+<tr>
+<td>KITABATAKE</td>
+<td>195</td>
+<td>Samurai</td>
+</tr>
+<tr>
+<td>KUSHLUK</td>
+<td>702</td>
+<td>Cavalier</td>
+</tr>
+<tr>
+<td>LA_HIRE</td>
+<td>640</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>LANCELOT</td>
+<td>174</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>LORD_DE_GRAVILLE</td>
+<td>642</td>
+<td>Arbalest, not so tough</td>
+</tr>
+<tr>
+<td>MASTER_OF_THE_TEMPLAR</td>
+<td>680</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>MINAMOTO</td>
+<td>196</td>
+<td>Samurai</td>
+</tr>
+<tr>
+<td>MORDRED</td>
+<td>176</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>NOBUNAGA</td>
+<td>845</td>
+<td>Samurai</td>
+</tr>
+<tr>
+<td>ORNLU_THE_WOLF</td>
+<td>707</td>
+<td>Wolf, very tough, towers can't target him</td>
+</tr>
+<tr>
+<td>POPE_LEO_I</td>
+<td>781</td>
+<td>Monk. Turns to a normal monk when he picks up a relic</td>
+</tr>
+<tr>
+<td>REYNALD_DE_CHATILLON</td>
+<td>678</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>RICHARD_THE_LIONHARTED</td>
+<td>160</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>ROBIN_HOOD</td>
+<td>200</td>
+<td>Longbowman</td>
+</tr>
+<tr>
+<td>ROLAND</td>
+<td>166</td>
+<td>Knight</td>
+</tr>
+<tr>
+<td>SCYTHIAN_SCOUT</td>
+<td>852</td>
+<td>Light cavalry, not so tough</td>
+</tr>
+<tr>
+<td>SCYTHIAN_WILD_WOMAN</td>
+<td>783</td>
+<td>Poor woman (same as Joan the Maid), not so tough</td>
+</tr>
+<tr>
+<td>SHAH</td>
+<td>704</td>
+<td>King. Hero kings don't work for regicide!</td>
+</tr>
+<tr>
+<td>SHERIFF_OF_NOTTINGHAM</td>
+<td>164</td>
+<td>Man at arms, not so tough</td>
+</tr>
+<tr>
+<td>SIEGFRIED</td>
+<td>170</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>SIEUR_BERTRAND</td>
+<td>636</td>
+<td>Knight</td>
+</tr>
+<tr>
+<td>SIEUR_DE_METZ</td>
+<td>634</td>
+<td>Knight</td>
+</tr>
+<tr>
+<td>SIR_JOHN_FASTOLF</td>
+<td>652</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>SUBOTAI</td>
+<td>698</td>
+<td>Heavy cavalry archer</td>
+</tr>
+<tr>
+<td>TAMERLANE</td>
+<td>172</td>
+<td>Mangudai</td>
+</tr>
+<tr>
+<td>THE_BLACK_PRINCE</td>
+<td>161</td>
+<td>Cavalier</td>
+</tr>
+<tr>
+<td>THEODORIC_THE_GOTH</td>
+<td>168</td>
+<td>Huskarl</td>
+</tr>
+<tr>
+<td>WILLIAM_THE_CONQUEROR</td>
+<td>849</td>
+<td>Knight with lance</td>
+</tr>
+<tr>
+<td>WILLIAM_WALLACE</td>
+<td>432</td>
+<td>Champion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="229-other-units">2.2.9. Other Units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advanced heavy crossbowman</td>
+<td>493</td>
+<td>New ranged unit, with unique graphics!</td>
+</tr>
+<tr>
+<td>Alternative Berserk</td>
+<td>94</td>
+<td>New melee unit, with unique graphics!</td>
+</tr>
+<tr>
+<td>Cobra Car</td>
+<td>748</td>
+<td>The one of the cheat</td>
+</tr>
+<tr>
+<td>Converter Galley</td>
+<td>536</td>
+<td>A galley that converts enemies like a monk!</td>
+</tr>
+<tr>
+<td>ES_FLAG</td>
+<td>851</td>
+<td>Ensemble Studios flag</td>
+</tr>
+<tr>
+<td>FLAG_A</td>
+<td>600</td>
+<td>Tall flag</td>
+</tr>
+<tr>
+<td>FLAG_B</td>
+<td>601</td>
+<td>Bifurcate flag</td>
+</tr>
+<tr>
+<td>FLAG_C</td>
+<td>602</td>
+<td>Spotted flag</td>
+</tr>
+<tr>
+<td>FLAG_D</td>
+<td>603</td>
+<td>Crossed flag</td>
+</tr>
+<tr>
+<td>FLAG_E</td>
+<td>604</td>
+<td>Binged flag</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>All flags can be placed by default on water, and also on some other objects. If placed with set_gaia_object_only, they're not rescuable, only eye-candy.</td>
+</tr>
+<tr>
+<td>Furious the monkey boy</td>
+<td>860</td>
+<td>The one of the cheat. VERY powerful! If gaia, attacks as a wolf</td>
+</tr>
+<tr>
+<td>HORSE</td>
+<td>814</td>
+<td>Can explore, but short sight</td>
+</tr>
+<tr>
+<td>Infiltrator</td>
+<td>299</td>
+<td>Looks exactly as a Militia, but he's stronger</td>
+</tr>
+<tr>
+<td>Junk</td>
+<td>15</td>
+<td>New ship, with unique graphics! Can explore. Turns invisible when it attacks; auto responds if attacked.</td>
+</tr>
+<tr>
+<td>MAP_REVEALER</td>
+<td>837</td>
+<td>Invisible and immobile; gives sight of 4 tiles radius area</td>
+</tr>
+<tr>
+<td>SABOTEUR</td>
+<td>706</td>
+<td>The one of the cheat. Stronger than Petard</td>
+</tr>
+<tr>
+<td>Shipwreck</td>
+<td>436</td>
+<td>Can't move unless in group. A nice eye-candy, but counts as 4 population!</td>
+</tr>
+<tr>
+<td>Super armored Archer</td>
+<td>571</td>
+<td>Armor 1000, but attack only 1</td>
+</tr>
+<tr>
+<td>Super armored Cavalry Archer</td>
+<td>577</td>
+<td>Armor 1000, but attack only 1</td>
+</tr>
+<tr>
+<td>Super armored Light Cavalry</td>
+<td>575</td>
+<td>Armor 1000, but attack only 1</td>
+</tr>
+<tr>
+<td>Super armored Militia</td>
+<td>573</td>
+<td>Armor 1000, but attack only 1</td>
+</tr>
+<tr>
+<td>TORCH</td>
+<td>499</td>
+<td>Can be placed even on water and forests. Not rescuable if gaia</td>
+</tr>
+<tr>
+<td>TORCH_CONVERTING</td>
+<td>854</td>
+<td>As TORCH, but joins human players that come by (like sheep)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2210-standard-buildings">2.2.10. Standard Buildings</h3>
+<table>
+<thead>
+<tr>
+<th>Building</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARCHERY_RANGE</td>
+<td>87</td>
+</tr>
+<tr>
+<td>BARRACKS</td>
+<td>12</td>
+</tr>
+<tr>
+<td>BLACKSMITH</td>
+<td>103</td>
+</tr>
+<tr>
+<td>BOMBARD_TOWER</td>
+<td>236</td>
+</tr>
+<tr>
+<td>CASTLE</td>
+<td>82</td>
+</tr>
+<tr>
+<td>DOCK</td>
+<td>45</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>50</td>
+</tr>
+<tr>
+<td>FISH_TRAP</td>
+<td>199</td>
+</tr>
+<tr>
+<td>FORTIFIED_WALL</td>
+<td>155</td>
+</tr>
+<tr>
+<td>GUARD_TOWER</td>
+<td>234</td>
+</tr>
+<tr>
+<td>HOUSE</td>
+<td>70</td>
+</tr>
+<tr>
+<td>KEEP</td>
+<td>235</td>
+</tr>
+<tr>
+<td>LUMBER_CAMP</td>
+<td>562</td>
+</tr>
+<tr>
+<td>MARKET</td>
+<td>84</td>
+</tr>
+<tr>
+<td>MILL</td>
+<td>68</td>
+</tr>
+<tr>
+<td>MINING_CAMP</td>
+<td>584</td>
+</tr>
+<tr>
+<td>MONASTERY</td>
+<td>104</td>
+</tr>
+<tr>
+<td>OUTPOST</td>
+<td>598</td>
+</tr>
+<tr>
+<td>PALISADE_WALL</td>
+<td>72</td>
+</tr>
+<tr>
+<td>SIEGE_WORKSHOP</td>
+<td>49</td>
+</tr>
+<tr>
+<td>STABLE</td>
+<td>86</td>
+</tr>
+<tr>
+<td>TOWN_CENTER</td>
+<td>109</td>
+</tr>
+<tr>
+<td>UNIVERSITY</td>
+<td>209</td>
+</tr>
+<tr>
+<td>WALL, STONE_WALL</td>
+<td>117</td>
+</tr>
+<tr>
+<td>WATCH_TOWER</td>
+<td>79</td>
+</tr>
+<tr>
+<td>WONDER</td>
+<td>276</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2211-note-on-walls">2.2.11. Note on Walls</h3>
+<p>Standard walls (palisade, stone or fortified) are automatically placed in rings around player lands, including four gates (one per side), whenever you use <code>set_place_for_every_player</code>. If you use palisade walls, the stone gates will be placed in the original AoC, but HD will place palisade gates instead.
+E.g. this command would create square walls with 15 tiles radius:</p>
+<pre><code class="rms">create_object WALL
+{
+set_place_for_every_player
+min_distance_to_players 15
+max_distance_to_players 15
+}
+</code></pre>
+
+<ul>
+<li>number_of_objects is ignored, so don't even type it</li>
+<li><code>min_distance</code> and <code>max_distance</code> must be specified, or you get bad results</li>
+<li>If <code>max_distance</code> is greater than <code>min_distance</code>, you get a non-square ring, with varying radius</li>
+<li>You can't place more than one wall ring per player. Any further walls after the first one will end up on top of the original ring, regardless of the min and max distance specified.</li>
+<li>You can't place single pieces of wall (not rings) for players, and you can't place rings for gaia</li>
+<li>You must place the wall AFTER placing a town center for every player. If you place it before a TC is placed, or if no TCs are placed, the wall will form a ring around the center of the map instead</li>
+<li>Walls are not placed if the players are completely separated from each other by water</li>
+<li>Walls are not placed on lands created with <code>assign_to_player</code></li>
+</ul>
+<h3 id="2212-other-buildings">2.2.12. Other Buildings</h3>
+<p>Most of these buildings do nothing and are eye-candy only. "Not working" buildings generally can't train units, research, receive resources or fire arrows; they only have sight and potentially population support.</p>
+<table>
+<thead>
+<tr>
+<th>Building</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Archery range, not working</td>
+<td>10</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>Barracks, not working</td>
+<td>498</td>
+<td>Feudal age style</td>
+</tr>
+<tr>
+<td>Barracks, not working</td>
+<td>20</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>Blacksmith, not working</td>
+<td>105</td>
+<td>Feudal age style</td>
+</tr>
+<tr>
+<td>Blacksmith, not working</td>
+<td>18</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>Bridge A, bottom</td>
+<td>607</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge A, mid</td>
+<td>606</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge A, mid, mid broken</td>
+<td>738</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge A, mid, top broken</td>
+<td>739</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge A, mid, bottom broken</td>
+<td>740</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge A, top</td>
+<td>605</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge B, bottom</td>
+<td>610</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge B, mid</td>
+<td>609</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge B, mid, mid broken</td>
+<td>741</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge B, mid, top broken</td>
+<td>742</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge B, mid, bottom broken</td>
+<td>743</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge B, top</td>
+<td>608</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Bridge A goes SW to NE. Bridge B goes NW to SE. They can't be attacked. They aren't rescuable if gaia. Middle parts always have some water underneath.</td>
+</tr>
+<tr>
+<td>Castle, not working</td>
+<td>33</td>
+<td>Does nothing, but can garrison 75 units! (they don't shoot)</td>
+</tr>
+<tr>
+<td>CATHEDRAL</td>
+<td>599</td>
+<td>Does nothing. Looks like British wonder, but bigger</td>
+</tr>
+<tr>
+<td>Dock, not working</td>
+<td>133</td>
+<td>Feudal age style</td>
+</tr>
+<tr>
+<td>Dock, not working</td>
+<td>47</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>DOME_OF_THE_ROCK</td>
+<td>690</td>
+<td>Does nothing. Great mid-east temple</td>
+</tr>
+<tr>
+<td>Fortified Gate</td>
+<td>/ 63,<br> \ 85,<br> — 660,<br> | 668</td>
+<td>Only central part actually looks like a fortified gate</td>
+</tr>
+<tr>
+<td>Fortified wall, corner</td>
+<td>80</td>
+<td>Has a fortified gate's HP and icon, but it's just a junction piece of wall.  It's placed as a normal object, not in rings as FORTIFIED_WALL</td>
+</tr>
+<tr>
+<td>Gate</td>
+<td>/ 64,<br> \ 88,<br> — 659,<br> | 667</td>
+<td></td>
+</tr>
+<tr>
+<td>GREAT_PYRAMID</td>
+<td>696</td>
+<td>Does nothing.</td>
+</tr>
+<tr>
+<td>House, feudal age</td>
+<td>463</td>
+<td>Works!</td>
+</tr>
+<tr>
+<td>House, castle age</td>
+<td>464</td>
+<td>Works!</td>
+</tr>
+<tr>
+<td>Lumber camp, not working</td>
+<td>563</td>
+<td></td>
+</tr>
+<tr>
+<td>Market, not working</td>
+<td>116</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>Market, not working</td>
+<td>137</td>
+<td>Imperial age style</td>
+</tr>
+<tr>
+<td>Mill, not working</td>
+<td>129</td>
+<td>Feudal age style</td>
+</tr>
+<tr>
+<td>Mill, not working</td>
+<td>130</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>Mining camp, not working</td>
+<td>585</td>
+<td></td>
+</tr>
+<tr>
+<td>Monastery, not working</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td>MONUMENT</td>
+<td>826</td>
+<td>Same as a wonder, but doesn't let you win</td>
+</tr>
+<tr>
+<td>MOSQUE</td>
+<td>655</td>
+<td>Does nothing. Looks exactly as the Turkish wonder</td>
+</tr>
+<tr>
+<td>PAVILION</td>
+<td>624</td>
+<td>Big tent. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>PAVILION2</td>
+<td>626</td>
+<td>Small tent. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>PAVILION3</td>
+<td>625</td>
+<td>Small tent. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>Port, not working</td>
+<td>446</td>
+<td>A castle age style dock. Has special graphics for east-European and American civs. Slightly different for others</td>
+</tr>
+<tr>
+<td>PYRAMID</td>
+<td>689</td>
+<td>Does nothing.</td>
+</tr>
+<tr>
+<td>Sea Gate (Palisade Gate in HD DLC) (open)</td>
+<td>/ 790,<br> \ 794,<br>  — 798,<br>  | 802</td>
+<td>A wooden gate on water! Friendly ships can pass thru. Palisade gate can be placed on land in AoF</td>
+</tr>
+<tr>
+<td>Sea Gate (Palisade Gate in HD DLC) (closed)</td>
+<td>/ 789,<br> \ 793,<br> — 797,<br> | 801</td>
+<td>A wooden gate on water! Friendly ships can pass thru. Palisade gate can be placed on land in AoF</td>
+</tr>
+<tr>
+<td>Sea Tower</td>
+<td>785</td>
+<td>New water building! Graphics aren't perfect but can shoot arrows. Graphics fixed in the HD Edition</td>
+</tr>
+<tr>
+<td>Sea Wall (part of palisade gate in HD DLC)</td>
+<td>791</td>
+<td>A wooden wall on water! But it's not automatically placed in rings. Part of the Palisade gate graphics in HD DLC</td>
+</tr>
+<tr>
+<td>Siege workshop, not working</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr>
+<td>Stable, not working</td>
+<td>101</td>
+<td>Castle age style</td>
+</tr>
+<tr>
+<td>THE_ACCURSED_TOWER</td>
+<td>684</td>
+<td>Powerful guard tower, similar to west-European ones. Great range</td>
+</tr>
+<tr>
+<td>THE_TOWER_OF_FLIES</td>
+<td>685</td>
+<td>Powerful guard tower, similar to west-European ones.</td>
+</tr>
+<tr>
+<td>Town center, not working</td>
+<td>71</td>
+<td>Can garrison, fire arrows, and support pop. Graphics aren't perfect.</td>
+</tr>
+<tr>
+<td>TRADE_WORKSHOP</td>
+<td>110</td>
+<td>Does nothing. Has west-European and far-east versions</td>
+</tr>
+<tr>
+<td>University, not working</td>
+<td>210</td>
+<td>Imperial age style</td>
+</tr>
+<tr>
+<td>Wall, corner</td>
+<td>81</td>
+<td>Has a gate's HP and icon, but it's just a junction piece of wall.  It's placed as a normal object, not in rings as WALL</td>
+</tr>
+<tr>
+<td>YURT</td>
+<td>712</td>
+<td>Big, wooden hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT2</td>
+<td>713</td>
+<td>Small, wooden hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT3</td>
+<td>714</td>
+<td>Small, wooden hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT4</td>
+<td>715</td>
+<td>Small, wooden hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT5</td>
+<td>716</td>
+<td>Small, leather hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT6</td>
+<td>717</td>
+<td>Small, leather hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT7</td>
+<td>718</td>
+<td>Small, leather hut. Works as a house, but only 500 HP</td>
+</tr>
+<tr>
+<td>YURT8</td>
+<td>719</td>
+<td>Big, leather hut. Works as a house, but only 500 HP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="23-gaia-objects">2.3. Gaia Objects</h2>
+<p>These objects can never belong to a player. <code>set_gaia_object_only</code> is required if <code>set_place_for_every_player</code> is used.
+Again, capital letters names are predefined labels, while lower case names are just descriptive (you must use <code>#const</code>).
+"Varies" means that the same type of object can actually have two or more different aspects (like the villagers, that can randomly be men or women), making a better eye-candy.</p>
+<h3 id="231-animals">2.3.1. Animals</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOAR</td>
+<td>48</td>
+<td></td>
+</tr>
+<tr>
+<td>DEER</td>
+<td>65</td>
+<td></td>
+</tr>
+<tr>
+<td>Deer, not huntable</td>
+<td>333</td>
+<td></td>
+</tr>
+<tr>
+<td>DIRE_WOLF</td>
+<td>89</td>
+<td>A wolf with 100 HP, but low attack. Not so dire, but AIs have trouble with these wolves</td>
+</tr>
+<tr>
+<td>DORADO, FISH_DORADO</td>
+<td>455</td>
+<td></td>
+</tr>
+<tr>
+<td>FISH</td>
+<td>53</td>
+<td>Called Perch, 200 food like shore fish (normal fish have more)</td>
+</tr>
+<tr>
+<td>HAWK</td>
+<td>96</td>
+<td></td>
+</tr>
+<tr>
+<td>IRON_BOAR</td>
+<td>810</td>
+<td>Very strong, attacks villagers at sight, can't be hunted.  Will cause AIs trouble</td>
+</tr>
+<tr>
+<td>JAGUAR</td>
+<td>812</td>
+<td></td>
+</tr>
+<tr>
+<td>JAVELINA</td>
+<td>822</td>
+<td>Just a boar with different name, isn't it? :)</td>
+</tr>
+<tr>
+<td>MACAW</td>
+<td>816</td>
+<td>Tropical bird, wandering like a hawk</td>
+</tr>
+<tr>
+<td>MARLIN1, GREAT_FISH_MARLIN</td>
+<td>450</td>
+<td></td>
+</tr>
+<tr>
+<td>MARLIN2, GREAT_FISH_MARLIN2</td>
+<td>451</td>
+<td></td>
+</tr>
+<tr>
+<td>RABID_WOLF</td>
+<td>202</td>
+<td>Slightly stronger. Sees and pursues villagers from far away.</td>
+</tr>
+<tr>
+<td>SALMON, FISH_SALMON</td>
+<td>456</td>
+<td></td>
+</tr>
+<tr>
+<td>SNAPPER, FISH_SNAPPER</td>
+<td>458</td>
+<td></td>
+</tr>
+<tr>
+<td>SHEEP</td>
+<td>594</td>
+<td>Can also be placed as a player object</td>
+</tr>
+<tr>
+<td>SHORE_FISH</td>
+<td>69</td>
+<td></td>
+</tr>
+<tr>
+<td>TUNA, FISH_TUNA</td>
+<td>457</td>
+<td></td>
+</tr>
+<tr>
+<td>TURKEY</td>
+<td>833</td>
+<td>Can also be placed as a player object</td>
+</tr>
+<tr>
+<td>WILD_HORSE</td>
+<td>835</td>
+<td>Wanders like a deer. Use HORSE for a player-controlled horse</td>
+</tr>
+<tr>
+<td>WOLF</td>
+<td>126</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="232-trees">2.3.2. Trees</h3>
+<p>Unlike forest terrains, tree objects aren't visible on mini-map. Normal trees have 100 wood each. The scenario editor trees (399-410) have 125 wood and cannot be cut down with siege onagers.  AIs sometimes may not recognize them as a wood source for the purpose of choosing initial lumber camp sites.</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BAMBOO_TREE, BAMBOO_FOREST_TREE</td>
+<td>348</td>
+<td>Varies. Same created by BAMBOO terrain</td>
+</tr>
+<tr>
+<td>JUNGLETREE, JUNGLE_TREE</td>
+<td>414</td>
+<td>Varies. Same created by JUNGLE terrain</td>
+</tr>
+<tr>
+<td>OAKTREE, FOREST_TREE, OAK_FOREST_TREE</td>
+<td>349</td>
+<td>Varies. Same created by FOREST terrain</td>
+</tr>
+<tr>
+<td>PALMTREE, PALM_FOREST_TREE</td>
+<td>351</td>
+<td>Varies. Same created by PALM_DESERT terrain</td>
+</tr>
+<tr>
+<td>PINETREE, PINE_FOREST_TREE</td>
+<td>350</td>
+<td>Varies. Same created by PINE_FOREST terrain</td>
+</tr>
+<tr>
+<td>SNOWPINETREE, SNOW_PINE_TREE</td>
+<td>413</td>
+<td>Varies. Same created by SNOW_FOREST terrain</td>
+</tr>
+<tr>
+<td>TREE_A, TREE1, TREE_TD</td>
+<td>399</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_B, TREE2</td>
+<td>400</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_C, TREE3</td>
+<td>401</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_D, TREE4</td>
+<td>402</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_E, TREE5</td>
+<td>403</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_F</td>
+<td>404</td>
+<td>Dry, no leaves</td>
+</tr>
+<tr>
+<td>TREE_G</td>
+<td>405</td>
+<td>Brown leaves</td>
+</tr>
+<tr>
+<td>TREE_H</td>
+<td>406</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_I</td>
+<td>407</td>
+<td>Dry, no leaves</td>
+</tr>
+<tr>
+<td>TREE_J</td>
+<td>408</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_K</td>
+<td>409</td>
+<td>Oak forest</td>
+</tr>
+<tr>
+<td>TREE_L</td>
+<td>410</td>
+<td>Oak forest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="233-other">2.3.3. Other</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrow</td>
+<td>315</td>
+<td>Lying on ground. Can be on water. Varies</td>
+</tr>
+<tr>
+<td>Arrows</td>
+<td>54</td>
+<td>Lying on ground. Can be on water. Varies</td>
+</tr>
+<tr>
+<td>BROKEN_CART</td>
+<td>858</td>
+<td></td>
+</tr>
+<tr>
+<td>CACTUS</td>
+<td>709</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>Car!</td>
+<td>749</td>
+<td>The one of the cheat, but eye-candy only</td>
+</tr>
+<tr>
+<td>Cliff, alternative</td>
+<td>273</td>
+<td>A small cliff, with new rock color</td>
+</tr>
+<tr>
+<td>CRACKS</td>
+<td>241</td>
+<td></td>
+</tr>
+<tr>
+<td>CRATER</td>
+<td>723</td>
+<td>Quite small</td>
+</tr>
+<tr>
+<td>EXPIRED_FISHTRAP</td>
+<td>278</td>
+<td>Can be on land. Disappears quickly</td>
+</tr>
+<tr>
+<td>FLOWER_BED</td>
+<td>859</td>
+<td></td>
+</tr>
+<tr>
+<td>FLOWERS_1</td>
+<td>334</td>
+<td>Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>FLOWERS_2</td>
+<td>335</td>
+<td>Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>FLOWERS_3</td>
+<td>336</td>
+<td>Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>FLOWERS_4</td>
+<td>337</td>
+<td>Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>FORAGE, FORAGE_BUSH</td>
+<td>59</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>GOLD</td>
+<td>66</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>GRAVE</td>
+<td>820</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>HAY_STACK</td>
+<td>857</td>
+<td></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>821</td>
+<td>Pole with human head</td>
+</tr>
+<tr>
+<td>MOUNTAIN_1, MOUNTAIN1</td>
+<td>310</td>
+<td>Can't walk on. Grassy</td>
+</tr>
+<tr>
+<td>MOUNTAIN_2, MOUNTAIN2</td>
+<td>311</td>
+<td>Can't walk on. Grassy</td>
+</tr>
+<tr>
+<td>MOUNTAIN_3</td>
+<td>744</td>
+<td>Can't walk on. Rocky</td>
+</tr>
+<tr>
+<td>MOUNTAIN_4</td>
+<td>745</td>
+<td>Can't walk on. Rocky</td>
+</tr>
+<tr>
+<td>NINE_BANDS</td>
+<td>720</td>
+<td>Pole with horn decorations</td>
+</tr>
+<tr>
+<td>OLD_STONE_HEAD</td>
+<td>855</td>
+<td>Pre-Columbian sculpture. Varies</td>
+</tr>
+<tr>
+<td>Outlaw</td>
+<td>158</td>
+<td>Neutral archer. Attacks everyone he sees! Cool but only 15 HP</td>
+</tr>
+<tr>
+<td>PATH_1</td>
+<td>339</td>
+<td>Muddy trail. Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>PATH_2</td>
+<td>340</td>
+<td>Muddy trail. Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>PATH_3</td>
+<td>341</td>
+<td>Muddy trail. Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>PATH_4</td>
+<td>338</td>
+<td>Two muddy trails crossing. Can overlap water and other stuff</td>
+</tr>
+<tr>
+<td>PIECE_OF_THE_TRUE_CROSS</td>
+<td>688</td>
+<td>Black relic. Disappears when picked up...</td>
+</tr>
+<tr>
+<td>PLANT, PLANTS</td>
+<td>818</td>
+<td>Small grass. Can be on water! Varies</td>
+</tr>
+<tr>
+<td>RELIC</td>
+<td>285</td>
+<td></td>
+</tr>
+<tr>
+<td>Relic, with civilization name</td>
+<td>287 British,<br>288 Byzantine,<br>289 Chinese,<br>290 Frankish,<br>292 Gothic,<br>294 Japanese,<br>295 Persian,<br> 296 Saracen,<br>297 Teutonic,<br>298 Turkish</td>
+<td>Only name is different from a normal relic. They become normal relics when brought to a monastery.</td>
+</tr>
+<tr>
+<td>ROCK</td>
+<td>623</td>
+<td>Can be on water, but looks good only on land. Varies.</td>
+</tr>
+<tr>
+<td>ROMAN_RUINS</td>
+<td>856</td>
+<td>Can be on water! Varies.</td>
+</tr>
+<tr>
+<td>RUBBLE_1_X_1</td>
+<td>863</td>
+<td>Like destroyed buildings, 1x1 tiles. Can be on water!</td>
+</tr>
+<tr>
+<td>Rubble 1x1, temporary</td>
+<td>143</td>
+<td>Can be on water! Disappears quickly</td>
+</tr>
+<tr>
+<td>RUBBLE_2_X_2</td>
+<td>864</td>
+<td>Can be on water!</td>
+</tr>
+<tr>
+<td>Rubble 2x2, temporary</td>
+<td>144</td>
+<td>Can be on water! Disappears quickly</td>
+</tr>
+<tr>
+<td>Rubble 2x2, different</td>
+<td>147</td>
+<td>Can be on water! Disappears quickly</td>
+</tr>
+<tr>
+<td>RUBBLE_3_X_3</td>
+<td>865</td>
+<td>Can be on water!</td>
+</tr>
+<tr>
+<td>Rubble 3x3, temporary</td>
+<td>145</td>
+<td>Can be on water! Disappears quickly</td>
+</tr>
+<tr>
+<td>Rubble 4x4, temporary</td>
+<td>146</td>
+<td>Can be on water! Disappears quickly</td>
+</tr>
+<tr>
+<td>Rubble 5x5, temporary</td>
+<td>148</td>
+<td>Can be on water! Disappears quickly</td>
+</tr>
+<tr>
+<td>RUGS</td>
+<td>711</td>
+<td>Can be on water! Varies</td>
+</tr>
+<tr>
+<td>RUINS</td>
+<td>345</td>
+<td>Quite big</td>
+</tr>
+<tr>
+<td>SEA_ROCKS_1</td>
+<td>389</td>
+<td></td>
+</tr>
+<tr>
+<td>SEA_ROCKS_2</td>
+<td>396</td>
+<td></td>
+</tr>
+<tr>
+<td>SHIPWRECK</td>
+<td>721</td>
+<td></td>
+</tr>
+<tr>
+<td>SHIPWRECK2</td>
+<td>722</td>
+<td></td>
+</tr>
+<tr>
+<td>SIGN</td>
+<td>819</td>
+<td>Wooden road signal. Can be on water!</td>
+</tr>
+<tr>
+<td>SKELETON</td>
+<td>710</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>Small white stone</td>
+<td>417</td>
+<td></td>
+</tr>
+<tr>
+<td>STATUE</td>
+<td>817</td>
+<td>The one of European universities. Can be on water!</td>
+</tr>
+<tr>
+<td>Stormy Dog</td>
+<td>862</td>
+<td>Flying dog! The one of the cheat... wanders like a hawk</td>
+</tr>
+<tr>
+<td>STONE</td>
+<td>102</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>STUMP</td>
+<td>809</td>
+<td>What remains of a cut tree. Varies</td>
+</tr>
+<tr>
+<td>Stump, temporary</td>
+<td>415</td>
+<td>Disappears after some time. Varies</td>
+</tr>
+<tr>
+<td>Stumps of bamboo</td>
+<td>737</td>
+<td>Disappears after some time</td>
+</tr>
+<tr>
+<td>Trireme</td>
+<td>61</td>
+<td>Eye-candy only. Disappears after some time. Can be on land. Varies (rotates)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="234-dead-units">2.3.4. Dead Units</h3>
+<p>These units, except for wild animals, can also be placed as player objects (with <code>set_place_for_every_player</code> and without <code>set_gaia_object_only</code>); of course they're not controllable, and only get owner's color.
+All dead units decay and disappear after some time. They can be placed on water.</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dead Adv. Hv. Crossbowman</td>
+<td>497</td>
+</tr>
+<tr>
+<td>Dead Arbalest</td>
+<td>687</td>
+</tr>
+<tr>
+<td>Dead Archer</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Dead Battering Ram</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Dead Berserk</td>
+<td>693</td>
+</tr>
+<tr>
+<td>Dead Boar (no food)</td>
+<td>356</td>
+</tr>
+<tr>
+<td>Dead Bombard Cannon</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Dead Camel</td>
+<td>494</td>
+</tr>
+<tr>
+<td>Dead Capped Ram</td>
+<td>423</td>
+</tr>
+<tr>
+<td>Dead Cataphract</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Dead Cavalier</td>
+<td>139</td>
+</tr>
+<tr>
+<td>Dead Cavalry Archer</td>
+<td>34</td>
+</tr>
+<tr>
+<td>Dead Champion</td>
+<td>151</td>
+</tr>
+<tr>
+<td>Dead Conquistador</td>
+<td>772</td>
+</tr>
+<tr>
+<td>Dead Crossbowman</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Dead Deer (no food)</td>
+<td>43</td>
+</tr>
+<tr>
+<td>Dead Eagle Warrior</td>
+<td>754</td>
+</tr>
+<tr>
+<td>Dead Heavy Camel</td>
+<td>113</td>
+</tr>
+<tr>
+<td>Dead Horse</td>
+<td>815</td>
+</tr>
+<tr>
+<td>Dead Huskarl</td>
+<td>62</td>
+</tr>
+<tr>
+<td>Dead Jaguar</td>
+<td>813</td>
+</tr>
+<tr>
+<td>Dead Joan of Arc</td>
+<td>630</td>
+</tr>
+<tr>
+<td>Dead Joan the Maid</td>
+<td>431</td>
+</tr>
+<tr>
+<td>Dead King</td>
+<td>839</td>
+</tr>
+<tr>
+<td>Dead Knight</td>
+<td>111</td>
+</tr>
+<tr>
+<td>Dead Knight with Lance</td>
+<td>633</td>
+</tr>
+<tr>
+<td>Dead Light Cavalry</td>
+<td>547</td>
+</tr>
+<tr>
+<td>Dead Long Swordsman</td>
+<td>180</td>
+</tr>
+<tr>
+<td>Dead Mameluke</td>
+<td>44</td>
+</tr>
+<tr>
+<td>Dead Man at Arms</td>
+<td>157</td>
+</tr>
+<tr>
+<td>Dead Mangonel</td>
+<td>675</td>
+</tr>
+<tr>
+<td>Dead Militia</td>
+<td>152</td>
+</tr>
+<tr>
+<td>Dead Missionary</td>
+<td>776</td>
+</tr>
+<tr>
+<td>Dead Monk</td>
+<td>134</td>
+</tr>
+<tr>
+<td>Dead Onager</td>
+<td>121</td>
+</tr>
+<tr>
+<td>Dead Paladin</td>
+<td>570</td>
+</tr>
+<tr>
+<td>Dead Plumed Archer</td>
+<td>764</td>
+</tr>
+<tr>
+<td>Dead Pikeman</td>
+<td>501</td>
+</tr>
+<tr>
+<td>Dead Scorpion</td>
+<td>149</td>
+</tr>
+<tr>
+<td>Dead Sheep (no food)</td>
+<td>595</td>
+</tr>
+<tr>
+<td>Dead Siege Onager</td>
+<td>589</td>
+</tr>
+<tr>
+<td>Dead Siege Ram</td>
+<td>549</td>
+</tr>
+<tr>
+<td>Dead Skirmisher</td>
+<td>238</td>
+</tr>
+<tr>
+<td>Dead Spearman</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Dead Tarkan</td>
+<td>480</td>
+</tr>
+<tr>
+<td>Dead Teutonic Knight</td>
+<td>181</td>
+</tr>
+<tr>
+<td>Dead Throwing Axeman</td>
+<td>154</td>
+</tr>
+<tr>
+<td>Dead Trade Cart, unpacked</td>
+<td>178</td>
+</tr>
+<tr>
+<td>Dead Trade Cart, packed</td>
+<td>205</td>
+</tr>
+<tr>
+<td>Dead Trebuchet, unpacked</td>
+<td>194</td>
+</tr>
+<tr>
+<td>Dead Trebuchet, packed</td>
+<td>735</td>
+</tr>
+<tr>
+<td>Dead Two Handed Swordsman</td>
+<td>568</td>
+</tr>
+<tr>
+<td>Dead Unrecognized cavalry</td>
+<td>135</td>
+</tr>
+<tr>
+<td>Dead Unrecognized infantry</td>
+<td>98</td>
+</tr>
+<tr>
+<td>Dead Unrecognized infantry</td>
+<td>750</td>
+</tr>
+<tr>
+<td>Dead Unrecognized infantry</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Dead Unrecognized infantry</td>
+<td>99</td>
+</tr>
+<tr>
+<td>Dead Villager, woman</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, builder</td>
+<td>213</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, farmer</td>
+<td>215</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, forager</td>
+<td>355</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, miner</td>
+<td>582</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, hunter</td>
+<td>217</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, lumberjack</td>
+<td>219</td>
+</tr>
+<tr>
+<td>Dead Villager, woman, shepherd</td>
+<td>591</td>
+</tr>
+<tr>
+<td>Dead Villager, man</td>
+<td>58</td>
+</tr>
+<tr>
+<td>Dead Villager, man, builder</td>
+<td>230</td>
+</tr>
+<tr>
+<td>Dead Villager, man, farmer</td>
+<td>228</td>
+</tr>
+<tr>
+<td>Dead Villager, man, forager</td>
+<td>353</td>
+</tr>
+<tr>
+<td>Dead Villager, man, miner</td>
+<td>229</td>
+</tr>
+<tr>
+<td>Dead Villager, man, hunter</td>
+<td>227</td>
+</tr>
+<tr>
+<td>Dead Villager, man, shepherd</td>
+<td>226</td>
+</tr>
+<tr>
+<td>Dead War Elephant</td>
+<td>136</td>
+</tr>
+<tr>
+<td>Dead War Wagon</td>
+<td>828</td>
+</tr>
+<tr>
+<td>Dead Woad Raider</td>
+<td>233</td>
+</tr>
+<tr>
+<td>Dead Wolf</td>
+<td>237</td>
+</tr>
+</tbody>
+</table>
+<h2 id="24-dlc-objects">2.4. DLC Objects</h2>
+<p>These objects were added with DLC expansions to the HD Edition on Steam. For the most part, they will cause the map to CRASH if you attempt to load a map that contains them in any version of the game that does not have the required expansions</p>
+<h3 id="241-animals-from-all-expansions">2.4.1. Animals from all Expansions</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dolphin</td>
+<td>61</td>
+<td>AoF; like great fish</td>
+</tr>
+<tr>
+<td>DLC_LLAMA</td>
+<td>305</td>
+<td>AoF; like sheep</td>
+</tr>
+<tr>
+<td>DLC_BEAR</td>
+<td>486</td>
+<td>AoF; like wolf</td>
+</tr>
+<tr>
+<td>DLC_COW</td>
+<td>705</td>
+<td>AoF; like sheep, but 150 food and 14 hp</td>
+</tr>
+<tr>
+<td>Wild Camel</td>
+<td>884</td>
+<td>AoF; like wild horse, no food</td>
+</tr>
+<tr>
+<td>Camel</td>
+<td>897</td>
+<td>AoF; like horse, converts</td>
+</tr>
+<tr>
+<td>DLC_VULTURE</td>
+<td>917</td>
+<td>AoF; like hawk</td>
+</tr>
+<tr>
+<td>DLC_ELEPHANT</td>
+<td>936</td>
+<td>AoF; like boar, but 400 food</td>
+</tr>
+<tr>
+<td>DLC_ZEBRA</td>
+<td>1019</td>
+<td>AK; like deer</td>
+</tr>
+<tr>
+<td>DLC_OSTRICH</td>
+<td>1026</td>
+<td>AK; like deer</td>
+</tr>
+<tr>
+<td>DLC_STORK</td>
+<td>1028</td>
+<td>AK; like hawk</td>
+</tr>
+<tr>
+<td>DLC_LION</td>
+<td>1029</td>
+<td>AK; like wolf</td>
+</tr>
+<tr>
+<td>DLC_CROCODILE</td>
+<td>1031</td>
+<td>AK; like wolf</td>
+</tr>
+<tr>
+<td>Falcon</td>
+<td>1056</td>
+<td>AK; like hawk</td>
+</tr>
+<tr>
+<td>DLC_GOAT</td>
+<td>1060</td>
+<td>AK; like sheep</td>
+</tr>
+<tr>
+<td>DLC_KOMODO</td>
+<td>1135</td>
+<td>RoR; like wolf</td>
+</tr>
+<tr>
+<td>DLC_TIGER</td>
+<td>1137</td>
+<td>RoR; like wolf</td>
+</tr>
+<tr>
+<td>DLC_RHINO</td>
+<td>1139</td>
+<td>RoR; like boar, but 400 food</td>
+</tr>
+<tr>
+<td>DLC_BOXTURTLE</td>
+<td>1141</td>
+<td>RoR; like shore fish</td>
+</tr>
+<tr>
+<td>DLC_WATERBUFFALO</td>
+<td>1142</td>
+<td>RoR; like sheep, but 150 food</td>
+</tr>
+</tbody>
+</table>
+<h3 id="242-eye-candy-from-the-forgotten">2.4.2. Eye-candy from the Forgotten</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rubble 2x2</td>
+<td>191</td>
+<td></td>
+</tr>
+<tr>
+<td>Rubble 2x2</td>
+<td>192</td>
+<td>temporary</td>
+</tr>
+<tr>
+<td>Grass Patch</td>
+<td>301</td>
+<td>tall grass</td>
+</tr>
+<tr>
+<td>Bush</td>
+<td>302</td>
+<td>2 variations, from JUNGLE terrain</td>
+</tr>
+<tr>
+<td>Seagulls</td>
+<td>303</td>
+<td>in a small patch</td>
+</tr>
+<tr>
+<td>Bonfire</td>
+<td>304</td>
+<td>can be placed as a player object to offer line of sight</td>
+</tr>
+<tr>
+<td>Black Tile</td>
+<td>306</td>
+<td>1x1 square of pure black</td>
+</tr>
+<tr>
+<td>Loot</td>
+<td>472</td>
+<td>pile of golden treasure</td>
+</tr>
+<tr>
+<td>Burned Building</td>
+<td>635</td>
+<td>varies</td>
+</tr>
+<tr>
+<td>Burned Building</td>
+<td>758</td>
+<td>varies</td>
+</tr>
+<tr>
+<td>Rock (Stone)</td>
+<td>839</td>
+<td>turns into mineable stone when attacked by villagers</td>
+</tr>
+<tr>
+<td>Rock (Gold)</td>
+<td>841</td>
+<td>turns into mineable gold when attacked by villagers</td>
+</tr>
+<tr>
+<td>Waterfall</td>
+<td>896</td>
+<td>3 rotations</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>900</td>
+<td>1x1 patch</td>
+</tr>
+<tr>
+<td>Flag F</td>
+<td>901</td>
+<td>with golden emblem</td>
+</tr>
+<tr>
+<td>Smoke</td>
+<td>902</td>
+<td>from blacksmith</td>
+</tr>
+<tr>
+<td>Boardwalk</td>
+<td>904-909</td>
+<td>narrow wooden bridge</td>
+</tr>
+<tr>
+<td>Impaled Corpse</td>
+<td>910</td>
+<td>varies, can be player object</td>
+</tr>
+<tr>
+<td>Boardwalk</td>
+<td>911-913</td>
+<td>narrow wooden bridge</td>
+</tr>
+<tr>
+<td>Quarry</td>
+<td>914</td>
+<td>pile of mined rocks, no stone</td>
+</tr>
+<tr>
+<td>Lumber</td>
+<td>915</td>
+<td>pile of logs, no wood</td>
+</tr>
+<tr>
+<td>Goods</td>
+<td>916</td>
+<td>fruit market stall, no food</td>
+</tr>
+<tr>
+<td>Rock 2</td>
+<td>918</td>
+<td>varies, brown rocks</td>
+</tr>
+<tr>
+<td>Barrels</td>
+<td>933</td>
+<td>varies</td>
+</tr>
+<tr>
+<td>Flame 1</td>
+<td>939</td>
+<td>small</td>
+</tr>
+<tr>
+<td>Flame 2</td>
+<td>940</td>
+<td>small</td>
+</tr>
+<tr>
+<td>Flame 3</td>
+<td>941</td>
+<td>large</td>
+</tr>
+<tr>
+<td>Flame 4</td>
+<td>942</td>
+<td>large</td>
+</tr>
+</tbody>
+</table>
+<h3 id="243-buildings-from-the-forgotten">2.4.3. Buildings from the Forgotten</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fortress</td>
+<td>33</td>
+<td>castle with new graphics, cannot train units</td>
+</tr>
+<tr>
+<td>Fortifed Palisade Wall</td>
+<td>119</td>
+<td>500 HP, can be placed like walls, comes with palisade gate</td>
+</tr>
+<tr>
+<td>Fire Tower</td>
+<td>190</td>
+<td>looks like keep, shoots fire</td>
+</tr>
+<tr>
+<td>Aquaduct</td>
+<td>231</td>
+<td>1600 HP, can be placed like walls, comes with palisade gate</td>
+</tr>
+<tr>
+<td>Amphitheatre</td>
+<td>251</td>
+<td>eye-candy only</td>
+</tr>
+<tr>
+<td>Colosseum</td>
+<td>263</td>
+<td>eye-candy only</td>
+</tr>
+<tr>
+<td>Indestructible Outpost</td>
+<td>308</td>
+<td>not actually indestructible, but very heavily armored</td>
+</tr>
+<tr>
+<td>City Wall</td>
+<td>370</td>
+<td>3200 HP, can be placed like walls, comes with palisade gate</td>
+</tr>
+<tr>
+<td>Temple of Heaven</td>
+<td>637</td>
+<td>eye-candy only</td>
+</tr>
+<tr>
+<td>Palisade Gate</td>
+<td>789-804</td>
+<td>automatically placed for non-standard walls</td>
+</tr>
+<tr>
+<td>Quimter Cathederal</td>
+<td>872</td>
+<td>eye-candy only</td>
+</tr>
+<tr>
+<td>Arch of Constantine</td>
+<td>899</td>
+<td>eye-candy only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="244-units-from-the-forgotten">2.4.4. Units from the Forgotten</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legionary</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Royal Janissary</td>
+<td>52</td>
+<td>stronger janissary with new graphics</td>
+</tr>
+<tr>
+<td>Spy</td>
+<td>138</td>
+<td>high attack, looks like man-at-arms</td>
+</tr>
+<tr>
+<td>Condottiero</td>
+<td>184</td>
+<td></td>
+</tr>
+<tr>
+<td>Slinger</td>
+<td>185</td>
+<td></td>
+</tr>
+<tr>
+<td>Flamethrower</td>
+<td>188</td>
+<td>Dragon in AoFE (the original free mod)</td>
+</tr>
+<tr>
+<td>Imperial Camel</td>
+<td>207</td>
+<td></td>
+</tr>
+<tr>
+<td>Centurion</td>
+<td>275</td>
+<td>can be placed with CARAVAN</td>
+</tr>
+<tr>
+<td>Nordic Swordsman</td>
+<td>361</td>
+<td>wields an axe, not a sword</td>
+</tr>
+<tr>
+<td>Penguin</td>
+<td>639</td>
+<td>cheat unit; not so strong</td>
+</tr>
+<tr>
+<td>Heavy Eagle Warrior</td>
+<td>753</td>
+<td></td>
+</tr>
+<tr>
+<td>Canoe</td>
+<td>778</td>
+<td>can attack</td>
+</tr>
+<tr>
+<td>Amazon Warrior</td>
+<td>825</td>
+<td>wields a spear</td>
+</tr>
+<tr>
+<td>Donkey</td>
+<td>846</td>
+<td>no food</td>
+</tr>
+<tr>
+<td>Amazon Archer</td>
+<td>850</td>
+<td></td>
+</tr>
+<tr>
+<td>Genoese Crowwbowman</td>
+<td>866</td>
+<td></td>
+</tr>
+<tr>
+<td>Elite Genoese Crossbowman</td>
+<td>868</td>
+<td></td>
+</tr>
+<tr>
+<td>Magyar Huszar</td>
+<td>869</td>
+<td></td>
+</tr>
+<tr>
+<td>Elite Magyar Huszar</td>
+<td>871</td>
+<td></td>
+</tr>
+<tr>
+<td>Elephant Archer</td>
+<td>873</td>
+<td></td>
+</tr>
+<tr>
+<td>Elite Elephant Archer</td>
+<td>875</td>
+<td></td>
+</tr>
+<tr>
+<td>Boyar</td>
+<td>876</td>
+<td></td>
+</tr>
+<tr>
+<td>Elite Boyar</td>
+<td>878</td>
+<td></td>
+</tr>
+<tr>
+<td>Kamayuk</td>
+<td>879</td>
+<td></td>
+</tr>
+<tr>
+<td>Elite Kamayuk</td>
+<td>881</td>
+<td></td>
+</tr>
+<tr>
+<td>Condottiero</td>
+<td>882</td>
+<td></td>
+</tr>
+<tr>
+<td>Siege Tower</td>
+<td>885</td>
+<td></td>
+</tr>
+<tr>
+<td>Tarkan</td>
+<td>886</td>
+<td></td>
+</tr>
+<tr>
+<td>Elite Tarkan</td>
+<td>887</td>
+<td></td>
+</tr>
+<tr>
+<td>Heavy Pikeman</td>
+<td>892</td>
+<td></td>
+</tr>
+<tr>
+<td>Eastern Swordsman</td>
+<td>894</td>
+<td></td>
+</tr>
+<tr>
+<td>Monk with Relic</td>
+<td>922</td>
+<td></td>
+</tr>
+<tr>
+<td>Queen</td>
+<td>923</td>
+<td>no attack, doesn't trigger defeat in regicide</td>
+</tr>
+<tr>
+<td>Alfred the Alpaca</td>
+<td>934</td>
+<td>cheat unit; 120 attack</td>
+</tr>
+<tr>
+<td>Dragon Ship</td>
+<td>938</td>
+<td>shoots fire</td>
+</tr>
+<tr>
+<td>Relic Cart</td>
+<td>944</td>
+<td>converts, cannot be destroyed or garrisoned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="245-heroes-from-the-forgotten">2.4.5. Heroes from the Forgotten</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vlad Dracula</td>
+<td>193</td>
+<td>Boyar</td>
+</tr>
+<tr>
+<td>Quauhtemoc</td>
+<td>307</td>
+<td>Elite Eagle Warrior</td>
+</tr>
+<tr>
+<td>Francisco de Orellana</td>
+<td>425</td>
+<td>Elite Conquistador</td>
+</tr>
+<tr>
+<td>Gonzalo Pizarro</td>
+<td>427</td>
+<td>Elite Conquistador</td>
+</tr>
+<tr>
+<td>Frederick Barbarossa</td>
+<td>429</td>
+<td>Elite Teutonic Knight</td>
+</tr>
+<tr>
+<td>Prithviraj</td>
+<td>437</td>
+<td>Heavy Cavalry Archer</td>
+</tr>
+<tr>
+<td>Francesco Sforza</td>
+<td>439</td>
+<td>Samurai</td>
+</tr>
+<tr>
+<td>Sanyogita</td>
+<td>925</td>
+<td>Queen</td>
+</tr>
+<tr>
+<td>Prithvi</td>
+<td>926</td>
+<td>Crossbowman</td>
+</tr>
+<tr>
+<td>Chand Bhai</td>
+<td>927</td>
+<td>Monk with unique graphic</td>
+</tr>
+<tr>
+<td>Saladin</td>
+<td>929</td>
+<td>Elite Mameluke</td>
+</tr>
+<tr>
+<td>Khosrau</td>
+<td>930</td>
+<td>Elite Elephant Archer</td>
+</tr>
+<tr>
+<td>Jarl</td>
+<td>931</td>
+<td>Elite Tarkan</td>
+</tr>
+<tr>
+<td>Savaran</td>
+<td>932</td>
+<td>Elite Cataphract</td>
+</tr>
+<tr>
+<td>Osman</td>
+<td>943</td>
+<td>Heavy Cavalry Archer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="246-dead-units-from-the-forgotten">2.4.6. Dead Units from the Forgotten</h3>
+<p>|Unit|ID||
+|--------------------------|-----|
+| Dead Legionary           | 2   |
+| Dead Slinger             | 186 |
+| Dead Flamethrower        | 189 |
+| Dead Centurion           | 277 |
+| Dead Imperial Camel      | 300 |
+| Dead Nordic Swordsman    | 362 |
+| Dead Monk (?)            | 412 |
+| Dead Bear                | 489 |
+| Dead Penguin             | 641 |
+| Dead Llama               | 780 |
+| Dead Cow                 | 843 |
+| Dead Donkey              | 848 |
+| Dead Genoese Crossbowman | 867 |
+| Dead Magyar Huszar       | 870 |
+| Dead Elephant Archer     | 874 |
+| Dead Boyar               | 877 |
+| Dead Kamayuk             | 880 |
+| Dead Condottiero         | 883 |
+| Dead Siege Tower         | 891 |
+| Dead Heavy Pikeman       | 893 |
+| Dead Eastern Swordsman   | 895 |
+| Dead Camel               | 898 |
+| Dead Amazon Warrior      | 919 |
+| Dead Amazon Archer       | 920 |
+| Dead Imam                | 921 |
+| Dead Queen               | 924 |
+| Dead Chand Bhai          | 928 |
+| Dead Alfred the Alpaca   | 935 |
+| Dead Elephant            | 937 |
+| Dead Shaw                | 945 |</p>
+<h3 id="247-eye-candy-from-african-kingdoms">2.4.7. Eye-candy from African Kingdoms</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLC_SAVANNAHPATCH</td>
+<td>1033</td>
+<td>light brown grass</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_5</td>
+<td>1041</td>
+<td>like AoC mountains</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_6</td>
+<td>1042</td>
+<td>rocky</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_7</td>
+<td>1043</td>
+<td>rocky</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_8</td>
+<td>1044</td>
+<td>rocky</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_9</td>
+<td>1045</td>
+<td>snowy</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_10</td>
+<td>1046</td>
+<td>snowy</td>
+</tr>
+<tr>
+<td>DLC_MOUNTAIN_11</td>
+<td>1047</td>
+<td>snowy</td>
+</tr>
+<tr>
+<td>DLC_BOULDER_A</td>
+<td>1048</td>
+<td>varies; small 1x1 rock formation</td>
+</tr>
+<tr>
+<td>DLC_BOULDER_B</td>
+<td>1049</td>
+<td>varies; tall 1x1 rock formation</td>
+</tr>
+<tr>
+<td>DLC_BOULDER_C</td>
+<td>1050</td>
+<td>3x3 rock formation</td>
+</tr>
+<tr>
+<td>DLC_DRAGONTREE</td>
+<td>1051</td>
+<td>varies, 100 wood</td>
+</tr>
+<tr>
+<td>DLC_BAOBABTREE</td>
+<td>1052</td>
+<td>varies, 200 wood</td>
+</tr>
+<tr>
+<td>DLC_AFRICANBUSH</td>
+<td>1053</td>
+<td>various green bushes; 100 wood</td>
+</tr>
+<tr>
+<td>DLC_AFRICANBUSH_2</td>
+<td>1054</td>
+<td>various snowy bushes; 100 wood</td>
+</tr>
+<tr>
+<td>DLC_ORANGEBUSH</td>
+<td>1059</td>
+<td>like forage bush</td>
+</tr>
+<tr>
+<td>DLC_ACACIATREE</td>
+<td>1063</td>
+<td>varies, 100 wood</td>
+</tr>
+<tr>
+<td>wooden rubble</td>
+<td>1065</td>
+<td>1x1</td>
+</tr>
+<tr>
+<td>DLC_ANIMALSKELETON</td>
+<td>1091</td>
+<td></td>
+</tr>
+<tr>
+<td>DLC_STELAE_A</td>
+<td>1092</td>
+<td>2x2 pillar</td>
+</tr>
+<tr>
+<td>DLC_STELAE_B</td>
+<td>1093</td>
+<td>1x1 pillar</td>
+</tr>
+<tr>
+<td>DLC_STELAE_C</td>
+<td>1094</td>
+<td>1x1 pillar</td>
+</tr>
+<tr>
+<td>DLC_GALLOW</td>
+<td>1095</td>
+<td>tree with noose</td>
+</tr>
+</tbody>
+</table>
+<h3 id="248-buildings-from-african-kingdoms">2.4.8. Buildings from African Kingdoms</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLC_FEITORIA</td>
+<td>1021</td>
+<td>generates resources over time</td>
+</tr>
+<tr>
+<td>DLC_FENCE</td>
+<td>1062</td>
+<td>1 HP, can be placed like walls, comes with palisade gate</td>
+</tr>
+<tr>
+<td>DLC_STORAGE</td>
+<td>1081</td>
+<td>2x2 thatch structure</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_A</td>
+<td>1082</td>
+<td>3x3 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_B</td>
+<td>1083</td>
+<td>2x2 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_C</td>
+<td>1084</td>
+<td>2x2 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_D</td>
+<td>1085</td>
+<td>2x2 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_E</td>
+<td>1086</td>
+<td>2x2 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_F</td>
+<td>1087</td>
+<td>2x2 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_AFRICANHUT_G</td>
+<td>1088</td>
+<td>2x2 straw hut, provides 5 housing space</td>
+</tr>
+<tr>
+<td>DLC_GRANARY</td>
+<td>1089</td>
+<td>1x1 structure</td>
+</tr>
+<tr>
+<td>DLC_BARRICADE</td>
+<td>1090</td>
+<td>a pile of rubbish, 1000 HP</td>
+</tr>
+<tr>
+<td>Palace</td>
+<td>1096</td>
+<td>wonder from random civilization</td>
+</tr>
+<tr>
+<td>Tent</td>
+<td>1097</td>
+<td>3x3 tent, provides 5 housing space</td>
+</tr>
+<tr>
+<td>Tent</td>
+<td>1098</td>
+<td>3x3 tent, provides 5 housing space</td>
+</tr>
+<tr>
+<td>Tent</td>
+<td>1099</td>
+<td>3x3 tent, provides 5 housing space</td>
+</tr>
+<tr>
+<td>Tent</td>
+<td>1100</td>
+<td>3x3 tent, provides 5 housing space</td>
+</tr>
+<tr>
+<td>Tent</td>
+<td>1101</td>
+<td>3x3 tent, provides 5 housing space</td>
+</tr>
+<tr>
+<td>Sea Fortification</td>
+<td>1102</td>
+<td>tower, cannot be placed on water</td>
+</tr>
+</tbody>
+</table>
+<h3 id="249-projectiles-from-african-kingdoms">2.4.9. Projectiles from African Kingdoms</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>throwing knife</td>
+<td>1055</td>
+<td>spins and makes sounds</td>
+</tr>
+<tr>
+<td>heavy bolt</td>
+<td>1057</td>
+<td>stationary and silent</td>
+</tr>
+<tr>
+<td>heavy bolt (flaming)</td>
+<td>1058</td>
+<td>stationary and silent</td>
+</tr>
+<tr>
+<td>bolt</td>
+<td>1111</td>
+<td>stationary and silent</td>
+</tr>
+<tr>
+<td>bolt (flaming)</td>
+<td>1112</td>
+<td>stationary and silent</td>
+</tr>
+<tr>
+<td>bolt</td>
+<td>1113</td>
+<td>stationary and silent</td>
+</tr>
+<tr>
+<td>bolt (flaming)</td>
+<td>1114</td>
+<td>stationary and silent</td>
+</tr>
+<tr>
+<td>organ gun bullet?</td>
+<td>1119</td>
+<td>stationary and silent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2410-units-from-african-kingdoms">2.4.10. Units from African Kingdoms</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLC_ORGANGUN</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>DLC_ELITEORGANGUN</td>
+<td>1003</td>
+</tr>
+<tr>
+<td>DLC_CARAVEL</td>
+<td>1004</td>
+</tr>
+<tr>
+<td>DLC_ELITECARAVEL</td>
+<td>1006</td>
+</tr>
+<tr>
+<td>DLC_CAMELARCHER</td>
+<td>1007</td>
+</tr>
+<tr>
+<td>DLC_ELITECAMELARCHER</td>
+<td>1009</td>
+</tr>
+<tr>
+<td>DLC_GENITOUR</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>DLC_ELITEGENITOUR</td>
+<td>1012</td>
+</tr>
+<tr>
+<td>DLC_GBETO</td>
+<td>1013</td>
+</tr>
+<tr>
+<td>DLC_ELITEGBETO</td>
+<td>1015</td>
+</tr>
+<tr>
+<td>DLC_SHOTELWARRIOR</td>
+<td>1016</td>
+</tr>
+<tr>
+<td>DLC_ELITESHOTELWARRIOR</td>
+<td>1018</td>
+</tr>
+<tr>
+<td>Monkboat (converts units)</td>
+<td>1022</td>
+</tr>
+<tr>
+<td>DLC_AOE1PRIEST</td>
+<td>1023</td>
+</tr>
+<tr>
+<td>Genitour (placeholder, 60 HP)</td>
+<td>1079</td>
+</tr>
+<tr>
+<td>Preist with relic</td>
+<td>1025</td>
+</tr>
+<tr>
+<td>DLC_FIREGALLEY</td>
+<td>1103</td>
+</tr>
+<tr>
+<td>DLC_DEMOLITIONRAFT</td>
+<td>1104</td>
+</tr>
+<tr>
+<td>DLC_SIEGETOWER</td>
+<td>1105</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2411-dead-units-from-african-kingdoms">2.4.11. Dead Units from African Kingdoms</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dead Organ Gun</td>
+<td>1002</td>
+</tr>
+<tr>
+<td>Dead Organ Gun</td>
+<td>1005</td>
+</tr>
+<tr>
+<td>Dead Camel Archer</td>
+<td>1008</td>
+</tr>
+<tr>
+<td>Dead Genitour</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>Dead Gbeto</td>
+<td>1014</td>
+</tr>
+<tr>
+<td>Dead Shotel Warrior</td>
+<td>1017</td>
+</tr>
+<tr>
+<td>Dead Zebra</td>
+<td>1020</td>
+</tr>
+<tr>
+<td>Dead Priest</td>
+<td>1024</td>
+</tr>
+<tr>
+<td>Dead Ostrich</td>
+<td>1027</td>
+</tr>
+<tr>
+<td>Dead Lion</td>
+<td>1030</td>
+</tr>
+<tr>
+<td>Dead Crocodile</td>
+<td>1032</td>
+</tr>
+<tr>
+<td>Dead Goat</td>
+<td>1061</td>
+</tr>
+<tr>
+<td>Dead Siege Tower</td>
+<td>1107</td>
+</tr>
+<tr>
+<td>Dead Dagnajan</td>
+<td>1108</td>
+</tr>
+<tr>
+<td>Dead Gidajan</td>
+<td>1110</td>
+</tr>
+<tr>
+<td>Dead Eagle Warrior</td>
+<td>1116</td>
+</tr>
+<tr>
+<td>Dead Elite Eagle Warrior</td>
+<td>1117</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2412-heroes-from-african-kingdoms">2.4.12. Heroes from African Kingdoms</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLC_MUSA</td>
+<td>1034</td>
+<td>Camel Archer</td>
+</tr>
+<tr>
+<td>DLC_SUNDJATA</td>
+<td>1035</td>
+<td>Light Cavalry</td>
+</tr>
+<tr>
+<td>DLC_TARIQ</td>
+<td>1036</td>
+<td>Genitour</td>
+</tr>
+<tr>
+<td>DLC_RICHARDDECLARE</td>
+<td>1037</td>
+<td>Light Cavalry</td>
+</tr>
+<tr>
+<td>DLC_TRISTAN</td>
+<td>1038</td>
+<td>Magyar Huszar</td>
+</tr>
+<tr>
+<td>DLC_YODIT</td>
+<td>1039</td>
+<td>Queen, no attack</td>
+</tr>
+<tr>
+<td>DLC_HENRY2</td>
+<td>1040</td>
+<td>Two-handed Swordsman</td>
+</tr>
+<tr>
+<td>DLC_YEKUNOAMLAK</td>
+<td>1064</td>
+<td>Shotel Warrior</td>
+</tr>
+<tr>
+<td>DLC_WARRIORYODIT</td>
+<td>1066</td>
+<td>Gbeto</td>
+</tr>
+<tr>
+<td>DLC_ITZCOATL</td>
+<td>1067</td>
+<td>Jaguar Warrior</td>
+</tr>
+<tr>
+<td>DLC_MUSTAFA</td>
+<td>1068</td>
+<td>Janissary</td>
+</tr>
+<tr>
+<td>DLC_PACAL2</td>
+<td>1069</td>
+<td>Plumed Archer</td>
+</tr>
+<tr>
+<td>DLC_BABUR</td>
+<td>1070</td>
+<td>Imperial Camel</td>
+</tr>
+<tr>
+<td>DLC_ABRAHAELEPHANT</td>
+<td>1071</td>
+<td>War Elephant</td>
+</tr>
+<tr>
+<td>DLC_GUGLIELMO</td>
+<td>1072</td>
+<td>Genoese Crossbowman</td>
+</tr>
+<tr>
+<td>DLC_SU_DINGFANG</td>
+<td>1073</td>
+<td>Chu-ko-nu</td>
+</tr>
+<tr>
+<td>DLC_PACHACUTI</td>
+<td>1074</td>
+<td>Kamayuk</td>
+</tr>
+<tr>
+<td>DLC_HUAYNA_CAPAC</td>
+<td>1075</td>
+<td>Slinger</td>
+</tr>
+<tr>
+<td>DLC_MIKLOSTOLDI</td>
+<td>1076</td>
+<td>Magyar Huszar</td>
+</tr>
+<tr>
+<td>DLC_LITTLEJOHN</td>
+<td>1077</td>
+<td>Spearman</td>
+</tr>
+<tr>
+<td>DLC_ZAWISZATHEBLACK</td>
+<td>1078</td>
+<td>Hussar</td>
+</tr>
+<tr>
+<td>DLC_SUMANGURU</td>
+<td>1080</td>
+<td>Cataphract</td>
+</tr>
+<tr>
+<td>DLC_DAGNAJAN</td>
+<td>1106</td>
+<td>Alephant Archer</td>
+</tr>
+<tr>
+<td>Gidajan</td>
+<td>1109</td>
+<td>Carries sword and shield</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2413-eye-candy-from-rise-of-the-rajas">2.4.13. Eye-candy from Rise of the Rajas</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLC_MANGROVE_TREE</td>
+<td>1144</td>
+<td>from DLC_MANGROVEFOREST terrain</td>
+</tr>
+<tr>
+<td>DLC_RAINTREE</td>
+<td>1146</td>
+<td>from DLC_RAINFOREST terrain</td>
+</tr>
+<tr>
+<td>DLC_ROCKBEACH</td>
+<td>1148</td>
+<td>massive rocky outcropping</td>
+</tr>
+<tr>
+<td>DLC_ROCKJUNGLE</td>
+<td>1149</td>
+<td>plant-covered rocks</td>
+</tr>
+<tr>
+<td>Flag G</td>
+<td>1150</td>
+<td></td>
+</tr>
+<tr>
+<td>Flag H</td>
+<td>1151</td>
+<td></td>
+</tr>
+<tr>
+<td>Flag I</td>
+<td>1152</td>
+<td></td>
+</tr>
+<tr>
+<td>Flag J</td>
+<td>1153</td>
+<td></td>
+</tr>
+<tr>
+<td>DLC_BUDDHA_STATUE_A</td>
+<td>1171</td>
+<td>2x2</td>
+</tr>
+<tr>
+<td>DLC_BUDDHA_STATUE_B</td>
+<td>1172</td>
+<td>3x3</td>
+</tr>
+<tr>
+<td>DLC_BUDDHA_STATUE_C</td>
+<td>1173</td>
+<td>1x1 sitting Buddha</td>
+</tr>
+<tr>
+<td>DLC_BUDDHA_STATUE_D</td>
+<td>1174</td>
+<td>1x1 standing Buddha</td>
+</tr>
+<tr>
+<td>DLC_FERN_PATCH</td>
+<td>1175</td>
+<td>cluster of small plants</td>
+</tr>
+<tr>
+<td>DLC_TROWULAN_GATE</td>
+<td>1176</td>
+<td>tall stone structure, varies</td>
+</tr>
+<tr>
+<td>DLC_VASES</td>
+<td>1177</td>
+<td>clay vessels, varies</td>
+</tr>
+<tr>
+<td>Stupa</td>
+<td>1191</td>
+<td>small structure</td>
+</tr>
+<tr>
+<td>Pagoda, tall</td>
+<td>1201</td>
+<td></td>
+</tr>
+<tr>
+<td>Pagoda, medium</td>
+<td>1202</td>
+<td></td>
+</tr>
+<tr>
+<td>Pagoda, short</td>
+<td>1203</td>
+<td></td>
+</tr>
+<tr>
+<td>Bridge C and D</td>
+<td>1204-1215</td>
+<td>wide beige stone bridge</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2414-buildings-from-rise-of-the-rajas">2.4.14. Buildings from Rise of the Rajas</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rice Farm</td>
+<td>1187</td>
+<td>contains food</td>
+</tr>
+<tr>
+<td>Dead Rice Farm</td>
+<td>1188</td>
+<td>can be reseeded</td>
+</tr>
+<tr>
+<td>Harbor</td>
+<td>1189</td>
+<td>fires arrows, cannot produce ships</td>
+</tr>
+<tr>
+<td>Army Tent, large</td>
+<td>1196</td>
+<td>opens to the left, supports 5 pop</td>
+</tr>
+<tr>
+<td>Army Tent, large</td>
+<td>1197</td>
+<td>opens to the right, supports 5 pop</td>
+</tr>
+<tr>
+<td>Army Tent, small</td>
+<td>1198</td>
+<td>opens to the right, supports 5 pop</td>
+</tr>
+<tr>
+<td>Army Tent, small</td>
+<td>1199</td>
+<td>opens to the left, supports 5 pop</td>
+</tr>
+<tr>
+<td>Army Tent, small</td>
+<td>1200</td>
+<td>opens to the bottom, supports 5 pop</td>
+</tr>
+<tr>
+<td>Sanchi Stupa</td>
+<td>1216</td>
+<td>Stupa monument</td>
+</tr>
+<tr>
+<td>Gol Gumbaz</td>
+<td>1217</td>
+<td>palace monument</td>
+</tr>
+<tr>
+<td>Barricade</td>
+<td>1218-1220</td>
+<td>rotated versions of DLC_BARRICADE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2415-projectiles-from-rise-of-the-rajas">2.4.15. Projectiles from Rise of the Rajas</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ballista Elephant Projectile</td>
+<td>1167</td>
+</tr>
+<tr>
+<td>Ballista Elephant Projectile (burning)</td>
+<td>1168</td>
+</tr>
+<tr>
+<td>Arrow</td>
+<td>1169</td>
+</tr>
+<tr>
+<td>Arrow (burning)</td>
+<td>1170</td>
+</tr>
+<tr>
+<td>Cow projectile (fired by Sharkatzor)</td>
+<td>1223</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2416-units-from-rise-of-the-rajas">2.4.16. Units from Rise of the Rajas</h3>
+<p>|Unit|ID|
+| DLC_BALLISTAELEPHANT           | 1120 |
+|--------------------------------|------|
+| DLC_ELITEBALLISTAELEPHANT      | 1122 |
+| DLC_KARAMBIT                   | 1123 |
+| DLC_ELITEKARAMBIT              | 1125 |
+| DLC_ARAMBAI                    | 1126 |
+| DLC_ELITEARAMBAI               | 1128 |
+| DLC_RATTANARCHER               | 1129 |
+| DLC_ELITERATTANARCHER          | 1131 |
+| DLC_BATTLEELEPHANT             | 1132 |
+| DLC_ELITEBATTLEELEPHANT        | 1134 |
+| DLC_IMPERIALSKIRMISHER         | 1155 |
+| Farmer (male villager)         | 1192 |
+| Sharkatzor (flying cheat unit) | 1222 |</p>
+<h3 id="2417-dead-units-from-rise-of-the-rajas">2.4.17. Dead Units from Rise of the Rajas</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dead Ballista Elephant</td>
+<td>1121</td>
+</tr>
+<tr>
+<td>Dead Karambit Warrior</td>
+<td>1124</td>
+</tr>
+<tr>
+<td>Dead Arambai</td>
+<td>1127</td>
+</tr>
+<tr>
+<td>Dead Rattan Archer</td>
+<td>1130</td>
+</tr>
+<tr>
+<td>Dead Battle Elephant</td>
+<td>1133</td>
+</tr>
+<tr>
+<td>Dead Komodo Dragon</td>
+<td>1136</td>
+</tr>
+<tr>
+<td>Dead Tiger</td>
+<td>1138</td>
+</tr>
+<tr>
+<td>Dead Rhinoceros</td>
+<td>1140</td>
+</tr>
+<tr>
+<td>Dead Water Buffalo</td>
+<td>1143</td>
+</tr>
+<tr>
+<td>Dead Elite Battle Elephant</td>
+<td>1154</td>
+</tr>
+<tr>
+<td>Dead Imperial Skirmisher</td>
+<td>1156</td>
+</tr>
+<tr>
+<td>Dead Sunda Royal Fighter</td>
+<td>1161</td>
+</tr>
+<tr>
+<td>Dead Gajah Mada</td>
+<td>1190</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2418-heroes-from-rise-of-the-rajas">2.4.18. Heroes from Rise of the Rajas</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>ID</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLC_GADJAH_MADA</td>
+<td>1157</td>
+<td>shirtless swordsman</td>
+</tr>
+<tr>
+<td>DLC_JAYANEGARA</td>
+<td>1158</td>
+<td>no attack, reskinned King</td>
+</tr>
+<tr>
+<td>DLC_RADEN_WIJAYA</td>
+<td>1159</td>
+<td>Cavalier</td>
+</tr>
+<tr>
+<td>DLC_SUNDA_ROYAL_FIGHTER</td>
+<td>1160</td>
+<td>wields spear and shield</td>
+</tr>
+<tr>
+<td>DLC_SURYAVARMAN_I</td>
+<td>1162</td>
+<td>Elite Battle Elephant</td>
+</tr>
+<tr>
+<td>DLC_UDAYADITYAVARMAN_I</td>
+<td>1163</td>
+<td>no attack, reskinned King</td>
+</tr>
+<tr>
+<td>DLC_JAYAVIRAVARMAN</td>
+<td>1164</td>
+<td>Karambit Warrior</td>
+</tr>
+<tr>
+<td>DLC_BAYINNAUNG</td>
+<td>1165</td>
+<td>Elite Battle Elephant</td>
+</tr>
+<tr>
+<td>DLC_TABINSHWEHTI</td>
+<td>1166</td>
+<td>Elephant Archer</td>
+</tr>
+<tr>
+<td>DLC_LELOI</td>
+<td>1178</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>DLC_LELAI1</td>
+<td>1179</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>DLC_LELAI2</td>
+<td>1180</td>
+<td>Two-Handed Swordsman</td>
+</tr>
+<tr>
+<td>DLC_LETRIEN</td>
+<td>1181</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>DLC_LUUNHANCHU</td>
+<td>1182</td>
+<td>Arbalest</td>
+</tr>
+<tr>
+<td>DLC_BUIBI</td>
+<td>1183</td>
+<td>Monk with unique graphic</td>
+</tr>
+<tr>
+<td>DLC_DINHLE</td>
+<td>1184</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>DLC_WANGTONG</td>
+<td>1185</td>
+<td>Cataphract</td>
+</tr>
+<tr>
+<td>DLC_ENVOY</td>
+<td>1186</td>
+<td>Light Cavalry</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../3_testing/" class="btn btn-neutral float-right" title="3. Testing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1_language_reference/" class="btn btn-neutral" title="1. Language Reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1_language_reference/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../3_testing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../highlight.js" defer></script>
+      <script src="../highlight.js-rms.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

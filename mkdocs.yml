@@ -12,3 +12,6 @@ theme:
     highlightjs: false # we use our own version
 extra_javascript: [highlight.js, highlight.js-rms.js]
 extra_css: [github.css]
+docs_dir: 'source'
+site_dir: 'docs'
+
