@@ -1057,8 +1057,8 @@ These objects were added with DLC expansions to the HD Edition on Steam. For the
 ### 2.4.16. Units from Rise of the Rajas
 
 |Unit|ID|
-| DLC_BALLISTAELEPHANT           | 1120 |
 |--------------------------------|------|
+| DLC_BALLISTAELEPHANT           | 1120 |
 | DLC_ELITEBALLISTAELEPHANT      | 1122 |
 | DLC_KARAMBIT                   | 1123 |
 | DLC_ELITEKARAMBIT              | 1125 |
